@@ -1,5 +1,7 @@
 # Guofeng Qian portfolio
 
+Live website: [g3qian.github.io](https://g3qian.github.io/) · [GitHub repository](https://github.com/g3qian/g3qian.github.io)
+
 A Quarto website implemented from the files in `../plan/`. The previous site is retained as a legacy reference. This folder contains ten pages, five case studies, research figures, shared data for 23 publications, and a reviewed six-page CV. The current source review and maintenance status are documented in `../plan/`.
 
 ```sh
@@ -33,9 +35,11 @@ The static build is written to `_site/`. Serve that directory with any static we
 - The confidential LPI field-diagnostics case study is parked in `_drafts/bridge-field-diagnostics/` (Quarto ignores folders that start with an underscore) until more information can be added. No teaching files, student data, or photos requiring permission are included.
 - No portrait was supplied; the hero uses a real bridge photograph from the approved presentation.
 
-## Current plan
+## Current plan and deployment
 
-The [content plan](../plan/README.md) records the implemented site, with the latest [content status and maintenance workflow](../plan/07-roadmap.md). The current build is local; hosting and a public address are separate decisions.
+The content plan is maintained in the sibling `../plan/` folder in the original workspace. It records the implemented pages, source evidence, presentation decisions, and maintenance status.
+
+The website was published to GitHub Pages on October 26, 2026. `main` contains the source; `gh-pages` contains the rendered public site. The configured public address is `https://g3qian.github.io/`. Stop an active preview, render, and run the site audit before publishing future changes. Unpublished drafts and raw supporting material remain outside the public repository.
 
 ## Verification
 

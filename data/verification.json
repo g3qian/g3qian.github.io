@@ -776,7 +776,17 @@
   },
   "source_review": "All five cases checked against relevant papers, dissertation sections, slides, and figure content; source locations recorded in plan/02-project-map.md.",
   "external_doi_checks": "Historical results retained separately in data/doi-checks.json; not rerun as part of this review.",
-  "deployment": "Local build only; hosting and domain remain open.",
+  "deployment": {
+    "provider": "GitHub Pages",
+    "status": "live",
+    "published_on": "2026-10-26",
+    "url": "https://g3qian.github.io/",
+    "repository": "https://github.com/g3qian/g3qian.github.io",
+    "source_branch": "main",
+    "publishing_branch": "gh-pages",
+    "published_commit": "086f74dbf5802fb9d949d1888d92bd11605b5835",
+    "https_enforced": true
+  },
   "latest_revision": "Restored the earlier twin-bridge overview (aerial view plus T1/T2 photographs) as the shared Home/Work project card, retaining bridge-first order. Full isolated render and static audit passed; the restored Work card was visually checked at desktop width.",
   "simulation_figure_review": {
     "figures": 7,
@@ -837,5 +847,260 @@
     "console_errors": [],
     "navigation_image": "Earlier twin-bridge overview restored; Work card visually checked at 1440 px."
   },
-  "home_images_kb": 742
+  "home_images_kb": 742,
+  "public_verification": {
+    "checked_on": "2026-10-26",
+    "pages": [
+      {
+        "brokenImages": [],
+        "figureAlignment": [
+          {
+            "image": "images/bridge-oma-temperature/bridge-underside.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          }
+        ],
+        "h1": 1,
+        "pageWidth": 1440,
+        "pendingImages": [],
+        "route": "/",
+        "width": 1440
+      },
+      {
+        "brokenImages": [],
+        "figureAlignment": [],
+        "h1": 1,
+        "pageWidth": 1440,
+        "pendingImages": [],
+        "route": "/work.html",
+        "width": 1440
+      },
+      {
+        "brokenImages": [],
+        "figureAlignment": [],
+        "h1": 1,
+        "pageWidth": 1440,
+        "pendingImages": [],
+        "route": "/experience.html",
+        "width": 1440
+      },
+      {
+        "brokenImages": [],
+        "figureAlignment": [],
+        "h1": 1,
+        "pageWidth": 1440,
+        "pendingImages": [],
+        "route": "/publications.html",
+        "width": 1440
+      },
+      {
+        "brokenImages": [],
+        "figureAlignment": [],
+        "h1": 1,
+        "pageWidth": 1440,
+        "pendingImages": [],
+        "route": "/about.html",
+        "width": 1440
+      },
+      {
+        "brokenImages": [],
+        "figureAlignment": [
+          {
+            "image": "../images/corrosion-simulation/field-corrosion.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/corrosion-simulation/stress-and-pit-shape.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/corrosion-simulation/pit-tip-stress.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/corrosion-simulation/crack-initiation-criteria.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/corrosion-simulation/cnn-gp-narx.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/corrosion-simulation/surrogate-prediction.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/corrosion-simulation/surrogate-architecture.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          }
+        ],
+        "h1": 1,
+        "pageWidth": 1440,
+        "pendingImages": [],
+        "route": "/work/corrosion-simulation.html",
+        "width": 1440
+      },
+      {
+        "brokenImages": [],
+        "figureAlignment": [
+          {
+            "image": "../images/corrosion-reliability/risk-map-and-gate.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/corrosion-reliability/water-levels.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/corrosion-reliability/crack-initiation.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/corrosion-reliability/multiscale-link.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/corrosion-reliability/model-runs.svg",
+            "leftDelta": 0,
+            "widthDelta": 0
+          }
+        ],
+        "h1": 1,
+        "pageWidth": 1440,
+        "pendingImages": [],
+        "route": "/work/corrosion-reliability.html",
+        "width": 1440
+      },
+      {
+        "brokenImages": [],
+        "figureAlignment": [
+          {
+            "image": "../images/corrosion-model-updating/experiment-setup.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/corrosion-model-updating/pit-detection.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/corrosion-model-updating/pit-depth-maps.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/corrosion-model-updating/inference-workflow.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/corrosion-model-updating/experimental-posteriors.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/corrosion-model-updating/blind-prediction.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          }
+        ],
+        "h1": 1,
+        "pageWidth": 1440,
+        "pendingImages": [],
+        "route": "/work/corrosion-model-updating.html",
+        "width": 1440
+      },
+      {
+        "brokenImages": [],
+        "figureAlignment": [
+          {
+            "image": "../images/generalized-damage-diagnosis/source-target-gates.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/generalized-damage-diagnosis/dann.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/generalized-damage-diagnosis/feature-alignment.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/generalized-damage-diagnosis/target-predictions.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          }
+        ],
+        "h1": 1,
+        "pageWidth": 1440,
+        "pendingImages": [],
+        "route": "/work/generalized-damage-diagnosis.html",
+        "width": 1440
+      },
+      {
+        "brokenImages": [],
+        "figureAlignment": [
+          {
+            "image": "../images/bridge-oma-temperature/bridge-underside.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/bridge-oma-temperature/sensor-layout.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/bridge-oma-temperature/oma-methods.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/bridge-oma-temperature/frequency-history.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/bridge-oma-temperature/frequency-distributions.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          },
+          {
+            "image": "../images/bridge-oma-temperature/bilinear-fits.webp",
+            "leftDelta": 0,
+            "widthDelta": 0
+          }
+        ],
+        "h1": 1,
+        "pageWidth": 1440,
+        "pendingImages": [],
+        "route": "/work/bridge-oma-temperature.html",
+        "width": 1440
+      }
+    ],
+    "mobile_navigation": "passed at 390 px: Home menu → Work; bridge project first",
+    "cv": {
+      "url": "https://g3qian.github.io/files/Guofeng_Qian_CV.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "bytes": 124249,
+      "matches_reviewed_cv": true
+    },
+    "console_errors": []
+  }
 }
