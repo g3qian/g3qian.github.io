@@ -1,47 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://g3qian.github.io/work/vibration-testing-model-correlation.html</loc>
-    <lastmod>2026-10-26T18:33:34.909Z</lastmod>
-  </url>
-  <url>
-    <loc>https://g3qian.github.io/work/corrosion-simulation.html</loc>
-    <lastmod>2026-10-26T18:29:05.981Z</lastmod>
-  </url>
-  <url>
-    <loc>https://g3qian.github.io/work/corrosion-model-updating.html</loc>
+    <loc>https://g3qian.github.io/work/generalized-damage-diagnosis.html</loc>
     <lastmod>2026-10-26T18:12:38.462Z</lastmod>
-  </url>
-  <url>
-    <loc>https://g3qian.github.io/work.html</loc>
-    <lastmod>2026-10-26T18:29:05.981Z</lastmod>
-  </url>
-  <url>
-    <loc>https://g3qian.github.io/index.html</loc>
-    <lastmod>2026-10-26T18:29:05.980Z</lastmod>
-  </url>
-  <url>
-    <loc>https://g3qian.github.io/about.html</loc>
-    <lastmod>2026-10-26T18:12:38.431Z</lastmod>
-  </url>
-  <url>
-    <loc>https://g3qian.github.io/experience.html</loc>
-    <lastmod>2026-10-26T18:29:05.981Z</lastmod>
-  </url>
-  <url>
-    <loc>https://g3qian.github.io/publications.html</loc>
-    <lastmod>2026-10-26T18:12:38.459Z</lastmod>
-  </url>
-  <url>
-    <loc>https://g3qian.github.io/work/bridge-oma-temperature.html</loc>
-    <lastmod>2026-10-26T18:29:05.981Z</lastmod>
   </url>
   <url>
     <loc>https://g3qian.github.io/work/corrosion-reliability.html</loc>
     <lastmod>2026-10-26T18:12:38.462Z</lastmod>
   </url>
   <url>
-    <loc>https://g3qian.github.io/work/generalized-damage-diagnosis.html</loc>
+    <loc>https://g3qian.github.io/work/bridge-oma-temperature.html</loc>
+    <lastmod>2026-10-26T18:48:29.131Z</lastmod>
+  </url>
+  <url>
+    <loc>https://g3qian.github.io/publications.html</loc>
+    <lastmod>2026-10-26T18:12:38.459Z</lastmod>
+  </url>
+  <url>
+    <loc>https://g3qian.github.io/experience.html</loc>
+    <lastmod>2026-10-26T18:48:29.121Z</lastmod>
+  </url>
+  <url>
+    <loc>https://g3qian.github.io/about.html</loc>
+    <lastmod>2026-10-26T18:12:38.431Z</lastmod>
+  </url>
+  <url>
+    <loc>https://g3qian.github.io/index.html</loc>
+    <lastmod>2026-10-26T18:48:29.099Z</lastmod>
+  </url>
+  <url>
+    <loc>https://g3qian.github.io/work.html</loc>
+    <lastmod>2026-10-26T18:48:29.111Z</lastmod>
+  </url>
+  <url>
+    <loc>https://g3qian.github.io/work/corrosion-model-updating.html</loc>
     <lastmod>2026-10-26T18:12:38.462Z</lastmod>
+  </url>
+  <url>
+    <loc>https://g3qian.github.io/work/corrosion-simulation.html</loc>
+    <lastmod>2026-10-26T18:48:29.139Z</lastmod>
   </url>
 </urlset>
