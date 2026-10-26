@@ -1,0 +1,17 @@
+---
+title: "Publications"
+description: "Journal articles, conference papers, and a book chapter in structural monitoring, corrosion, digital twins, and probabilistic assessment."
+body-classes: wide-page
+---
+
+::: {.work-intro}
+My publications cover structural health monitoring, multiscale corrosion simulation, machine learning, and probabilistic assessment. Four papers that tell the core story of my research come first, followed by the complete list. You can also find my work on [Google Scholar ↗](https://scholar.google.com/citations?user=KxP9bSkAAAAJ&hl=en).
+:::
+
+## Selected Publications
+
+{{< include includes/selected-publications.html >}}
+
+::: {.publication-list}
+{{< include includes/all-publications.html >}}
+:::

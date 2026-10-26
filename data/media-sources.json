@@ -1,0 +1,261 @@
+[
+  {
+    "file": "images/bridge-oma-temperature/bridge-underside.webp",
+    "source": "EWSHM2026_GuofengQian.pptx, slide 3",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 354516
+  },
+  {
+    "file": "images/bridge-oma-temperature/oma-methods.webp",
+    "source": "EWSHM2026_GuofengQian.pptx, slide 7; two panels combined, labels added",
+    "width": 1640,
+    "height": 665,
+    "bytes": 100386
+  },
+  {
+    "file": "images/bridge-oma-temperature/sensor-layout.webp",
+    "source": "EWSHM2026_GuofengQian.pptx, slide 5",
+    "width": 1004,
+    "height": 711,
+    "bytes": 115372
+  },
+  {
+    "file": "images/bridge-oma-temperature/frequency-history.webp",
+    "source": "EWSHM2026_GuofengQian.pptx, slide 9",
+    "width": 1200,
+    "height": 800,
+    "bytes": 83636
+  },
+  {
+    "file": "images/bridge-oma-temperature/frequency-distributions.webp",
+    "source": "EWSHM2026_GuofengQian.pptx, slide 10",
+    "width": 562,
+    "height": 422,
+    "bytes": 22582
+  },
+  {
+    "file": "images/bridge-oma-temperature/bilinear-fits.webp",
+    "source": "EWSHM2026_GuofengQian.pptx, slide 12; panels combined without changing data",
+    "width": 1358,
+    "height": 565,
+    "bytes": 103800
+  },
+  {
+    "file": "images/bridge-oma-temperature/residuals.webp",
+    "source": "EWSHM2026_GuofengQian.pptx, slide 15",
+    "width": 2000,
+    "height": 353,
+    "bytes": 95834
+  },
+  {
+    "file": "images/corrosion-simulation/stress-and-pit-shape.webp",
+    "source": "Existing real research figure: Picture1.png; composited on white",
+    "width": 2000,
+    "height": 1126,
+    "bytes": 56384
+  },
+  {
+    "file": "images/corrosion-simulation/surrogate-architecture.webp",
+    "source": "Existing real research figure: surrogate_architecture.png",
+    "width": 1880,
+    "height": 938,
+    "bytes": 155810
+  },
+  {
+    "file": "images/corrosion-simulation/field-corrosion.webp",
+    "source": "IWSHM_MU.pptx, slide 3; photo: Brian Eick, USACE ERDC",
+    "width": 1700,
+    "height": 1275,
+    "bytes": 336444
+  },
+  {
+    "file": "images/corrosion-simulation/cyclic-loading.webp",
+    "source": "Dissertation Final.pptx, slide 25; five frames rotated to match the slide and labeled",
+    "width": 1625,
+    "height": 450,
+    "bytes": 32098
+  },
+  {
+    "file": "images/corrosion-simulation/surrogate-prediction.webp",
+    "source": "Dissertation Final.pptx, slide 46",
+    "width": 1514,
+    "height": 897,
+    "bytes": 69006
+  },
+  {
+    "file": "images/corrosion-simulation/card.webp",
+    "source": "Existing Picture1.png",
+    "width": 1200,
+    "height": 800,
+    "bytes": 37374
+  },
+  {
+    "file": "images/corrosion-reliability/multiscale-link.webp",
+    "source": "Existing real research figure: uncertaintypropagation.png; composited on white",
+    "width": 1776,
+    "height": 430,
+    "bytes": 68626
+  },
+  {
+    "file": "images/corrosion-reliability/gate-risk-map.webp",
+    "source": "Existing real research figure: reliability2.png",
+    "width": 1216,
+    "height": 1194,
+    "bytes": 254820
+  },
+  {
+    "file": "images/corrosion-reliability/card.webp",
+    "source": "Existing reliability2.png",
+    "width": 1200,
+    "height": 800,
+    "bytes": 123436
+  },
+  {
+    "file": "images/corrosion-reliability/water-levels.webp",
+    "source": "Dissertation Final.pptx, slides 13\u201314; USGS gauge data at Greenup Dam",
+    "width": 1320,
+    "height": 865,
+    "bytes": 104498
+  },
+  {
+    "file": "images/corrosion-reliability/crack-initiation.webp",
+    "source": "Dissertation Final.pptx, slide 59; Scientific Reports 2022",
+    "width": 1492,
+    "height": 840,
+    "bytes": 97190
+  },
+  {
+    "file": "images/corrosion-reliability/risk-map-and-gate.webp",
+    "source": "Dissertation Final.pptx, slide 68; MSSP 2023, Fig. 16",
+    "width": 2000,
+    "height": 827,
+    "bytes": 346756
+  },
+  {
+    "file": "images/corrosion-model-updating/pit-detection.webp",
+    "source": "Dissertation Final.pptx, slide 74",
+    "width": 1669,
+    "height": 871,
+    "bytes": 104548
+  },
+  {
+    "file": "images/corrosion-model-updating/inference-workflow.webp",
+    "source": "IWSHM_MU.pptx, slide 11",
+    "width": 2000,
+    "height": 1028,
+    "bytes": 121424
+  },
+  {
+    "file": "images/corrosion-model-updating/experiment-setup.webp",
+    "source": "IWSHM_MU.pptx, slide 7",
+    "width": 1069,
+    "height": 595,
+    "bytes": 72170
+  },
+  {
+    "file": "images/corrosion-model-updating/pit-depth-maps.webp",
+    "source": "IWSHM_MU.pptx, slide 9",
+    "width": 2000,
+    "height": 1792,
+    "bytes": 88140
+  },
+  {
+    "file": "images/corrosion-model-updating/blind-prediction.webp",
+    "source": "IWSHM_MU.pptx, slide 15",
+    "width": 1181,
+    "height": 969,
+    "bytes": 85204
+  },
+  {
+    "file": "images/corrosion-model-updating/card.webp",
+    "source": "IWSHM_MU.pptx, slide 9",
+    "width": 1200,
+    "height": 800,
+    "bytes": 36346
+  },
+  {
+    "file": "images/generalized-damage-diagnosis/source-target-gates.webp",
+    "source": "IWSHM_DA.pptx, slide 3; trimmed, with source and target labels added",
+    "width": 2000,
+    "height": 1000,
+    "bytes": 119774
+  },
+  {
+    "file": "images/generalized-damage-diagnosis/card.webp",
+    "source": "IWSHM_DA.pptx, slide 3",
+    "width": 1200,
+    "height": 800,
+    "bytes": 86366
+  },
+  {
+    "file": "images/generalized-damage-diagnosis/dann.webp",
+    "source": "IWSHM_DA.pptx, slide 4",
+    "width": 1416,
+    "height": 538,
+    "bytes": 40812
+  },
+  {
+    "file": "images/generalized-damage-diagnosis/feature-alignment.webp",
+    "source": "IWSHM_DA.pptx, slide 10",
+    "width": 2000,
+    "height": 2000,
+    "bytes": 197564
+  },
+  {
+    "file": "images/generalized-damage-diagnosis/target-predictions.webp",
+    "source": "IWSHM_DA.pptx, slide 9; the two target-gate (Bonneville) panels",
+    "width": 820,
+    "height": 390,
+    "bytes": 34670
+  },
+  {
+    "file": "images/corrosion-reliability/model-runs.svg",
+    "source": "Qian, Hu, and Todd, MSSP 200 (2023), 110619, Table 2; local reliability benchmark function evaluations; manually maintained SVG",
+    "width": 1200,
+    "height": 680,
+    "bytes": 14276
+  },
+  {
+    "file": "images/corrosion-simulation/crack-initiation-criteria.webp",
+    "source": "Dissertation Final.pptx, slide 58; dissertation Fig. 2.5",
+    "width": 883,
+    "height": 579,
+    "bytes": 37698
+  },
+  {
+    "file": "images/corrosion-simulation/cnn-autoencoder.webp",
+    "source": "Dissertation Final.pptx, slide 36; dissertation Fig. 3.3; blank margins trimmed",
+    "width": 1707,
+    "height": 708,
+    "bytes": 61800
+  },
+  {
+    "file": "images/corrosion-simulation/pit-tip-stress.webp",
+    "source": "Dissertation Final.pptx, slide 57; original panels cropped and scaled to equal physical-domain sizes; color scale retained; labels added",
+    "width": 1400,
+    "height": 770,
+    "bytes": 26212
+  },
+  {
+    "file": "images/corrosion-simulation/cnn-gp-narx.webp",
+    "source": "Dissertation Final.pptx, slide 35; dissertation Fig. 3.1; CNN encoding, recursive GP-NARX forecast, and decoding workflow",
+    "width": 816,
+    "height": 639,
+    "bytes": 57136
+  },
+  {
+    "file": "images/corrosion-model-updating/experimental-posteriors.webp",
+    "source": "IWSHM_MU.pptx, slide 13; JCSHM manuscript Fig. 10; real laser-scan parameter posteriors",
+    "width": 1224,
+    "height": 962,
+    "bytes": 65254
+  },
+  {
+    "file": "images/bridge-oma-temperature/card.webp",
+    "source": "Earlier website bridge-monitoring/overview.png; twin-bridge aerial view and T1/T2 photographs",
+    "width": 1200,
+    "height": 800,
+    "bytes": 121534
+  }
+]

@@ -1,0 +1,165 @@
+---
+title: "Experience"
+description: "Engineering at LPI, doctoral and postdoctoral research at UC San Diego, and teaching and mentoring in structural engineering."
+body-classes: wide-page
+---
+
+::: {.work-intro}
+My experience moves from the lab to the field: doctoral and postdoctoral research at UC San Diego, then engineering practice in Germany. Along the way, teaching and mentoring became an important part of the work. The most recent role comes first.
+:::
+
+:::: {.timeline-row}
+::: {.timeline-meta}
+September 2025–August 2026
+
+Hannover, Germany
+:::
+::: {.timeline-content}
+## R&D Engineer
+
+::: {.organization}
+LPI Ingenieurgesellschaft mbH
+:::
+
+At LPI, I brought my research background to bridges in service, working on structural monitoring and condition assessment.
+
+- Automated operational modal analysis of long-term monitoring data, with bootstrap uncertainty bounds.
+- Studied how temperature shifts the natural frequencies of two twin bridges, one with documented tendon damage.
+- Interpreted strain, displacement, inclination, acoustic-emission, and fiber-optic measurements for bridge owners, and automated parametric SOFiSTiK models with Python.
+
+::: {.case-links}
+[Operational Modal Analysis and Temperature Effects →](work/bridge-oma-temperature.qmd)
+:::
+:::
+::::
+
+:::: {.timeline-row}
+::: {.timeline-meta}
+January 2024–August 2025
+
+La Jolla, United States
+:::
+::: {.timeline-content}
+## Postdoctoral Researcher
+
+::: {.organization}
+University of California San Diego
+:::
+
+After my Ph.D., I extended the USACE/ERDC-supported research program from single structures to populations of similar structures, and tested the corrosion model against experiments.
+
+- Developed generalized damage diagnosis that uses labeled data from one structure to diagnose a similar, unlabeled structure.
+- Validated Bayesian updating of the corrosion model against laboratory corrosion experiments.
+- Contributed to proposals and semiannual sponsor reviews, and mentored graduate and undergraduate researchers.
+
+::: {.case-links}
+[Generalized Damage Diagnosis →](work/generalized-damage-diagnosis.qmd) · [Bayesian Model Updating →](work/corrosion-model-updating.qmd)
+:::
+:::
+::::
+
+:::: {.timeline-row}
+::: {.timeline-meta}
+January 2021–December 2023
+
+La Jolla, United States
+:::
+::: {.timeline-content}
+## Graduate Student Researcher
+
+::: {.organization}
+University of California San Diego
+:::
+
+My doctoral research asked how to diagnose and predict pitting corrosion in large civil infrastructure.
+
+- Built a multiphysics phase-field corrosion model and machine-learning surrogates that run it in seconds.
+- Propagated uncertainty from loads, chemistry, and models to a reliability analysis of an entire gate.
+- Developed Bayesian model updating from inspection images.
+
+::: {.case-links}
+[Corrosion Simulation →](work/corrosion-simulation.qmd) · [Uncertainty and Reliability →](work/corrosion-reliability.qmd) · [Bayesian Model Updating →](work/corrosion-model-updating.qmd)
+:::
+:::
+::::
+
+:::: {.timeline-row}
+::: {.timeline-meta}
+January–December 2020
+
+La Jolla, United States
+:::
+::: {.timeline-content}
+## Research Assistant
+
+::: {.organization}
+University of California San Diego
+:::
+
+My first research project: Abaqus models of debonding in composite aircraft wing spars, and a deep-learning surrogate for strain response across damage locations and sizes.
+:::
+::::
+
+::: {.timeline-divider}
+Teaching, Mentoring, and Service
+:::
+
+:::: {.timeline-row}
+::: {.timeline-meta}
+2021–2023
+
+UC San Diego
+:::
+::: {.timeline-content}
+## Teaching
+
+Teaching assistant for SE 168/268, *Structural System Testing and Model Correlation* (Spring 2022 and 2023), a course co-taught by Prof. Michael Todd and engineers from ATA Engineering. Over ten weeks, students take a plate from a finite-element model to a modal test, signal processing, test–model correlation, and model updating.
+
+I led lab instruction in instrumentation, hammer and shaker testing, data acquisition, and data quality, and guided students through modal identification and correlation. In the final project, students locate a hidden spring and estimate its stiffness from new measurements.
+
+I also supported SE 130A/B, *Structural Analysis I and II* (Summer 2021).
+:::
+::::
+
+:::: {.timeline-row}
+::: {.timeline-meta}
+2022–2025
+
+UC San Diego
+:::
+::: {.timeline-content}
+## Mentoring
+
+- **Haiwei Lin**, Ph.D. researcher: corrosion-to-cracking modeling, through a collaboration I initiated with Prof. Shabnam Semnani.
+- **Vaibhav Pratap**, M.S. independent study: reliability analysis and uncertainty quantification.
+- **Edward Yu and Peter Le**, NSF REU undergraduates: cantilever-plate testing, finite-element correlation, and boundary-stiffness updating.
+:::
+::::
+
+:::: {.timeline-row}
+::: {.timeline-meta}
+2021–2025
+
+USACE / ERDC
+:::
+::: {.timeline-content}
+## Research Program
+
+*Innovative Technologies in Structural Health Monitoring for Condition Assessment and Reliability Prediction* (W9132T-22-20014). I developed technical content for five proposal topics and presented research progress at semiannual reviews.
+:::
+::::
+
+:::: {.timeline-row}
+::: {.timeline-meta}
+Since 2022
+:::
+::: {.timeline-content}
+## Service and Affiliations
+
+Reviewer for *ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part B*, *Journal of Computational Physics*, *Journal of Verification, Validation and Uncertainty Quantification*, and *Journal of Structural Design and Construction Practice*.
+
+Member of the Society for Experimental Mechanics and the Earthquake Engineering Research Institute.
+
+[Download Full CV ↓](files/Guofeng_Qian_CV.pdf){.button .secondary download="Guofeng_Qian_CV.pdf"}
+:::
+::::

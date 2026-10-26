@@ -1,0 +1,90 @@
+---
+title: "About Me"
+description: "Guofeng Qian is a structural engineer and researcher in Vancouver. His path runs from China and Australia to UC San Diego and bridge monitoring in Germany."
+body-classes: about-page
+---
+
+::: {.eyebrow .accent-text .about-eyebrow}
+Structural Engineer · Researcher · Vancouver, BC
+:::
+
+::: {.lede}
+I'm a structural engineer and researcher based in Vancouver, Canada. I'm curious about how structures change over time: how corrosion, damage, and the environment slowly alter the way a bridge or a steel gate behaves, and how we can notice those changes early enough to act.
+:::
+
+That curiosity has taken me across four countries. I studied civil engineering at Harbin Institute of Technology in China, with an exchange semester at Monash University in Australia. I then moved to UC San Diego, where I earned my M.S. and Ph.D. in structural engineering with Prof. Michael Todd.
+
+At UC San Diego, in a research program supported by the U.S. Army Corps of Engineers, I studied pitting corrosion on the steel gates of navigation locks.
+
+I simulated it with multiphysics models and machine-learning surrogates, carried its uncertainty through to a reliability analysis of a whole gate, and updated the models with laboratory measurements. As a postdoc, I turned to diagnosing damage across many similar structures.
+
+In 2025, I joined LPI Ingenieurgesellschaft in Hannover, Germany, to look at the same question from the field: bridges in service. There I automated operational modal analysis of long-term monitoring data, studied how temperature shifts the natural frequencies of an intact and a damaged bridge, and helped interpret field measurements for bridge owners.
+
+Teaching and mentoring have been a rewarding part of the journey, from running modal-testing labs to guiding students through their first research projects. You can read more on the [Experience](experience.qmd) page, or browse the [case studies](work.qmd).
+
+## Education
+
+::: {.education-item}
+### Ph.D. in Structural Engineering
+
+University of California San Diego
+
+::: {.meta}
+2021–2023 · Advisor: Prof. Michael D. Todd
+:::
+
+Dissertation: *Diagnostics and Prognostics of Pitting Corrosion in Large Civil Infrastructure Using Multi-Scale Simulation and Machine Learning*.
+:::
+
+::: {.education-item}
+### M.S. in Structural Engineering
+
+University of California San Diego
+
+::: {.meta}
+2019–2020 · Health Monitoring and Nondestructive Evaluation
+:::
+:::
+
+::: {.education-item}
+### B.Eng. in Civil Engineering
+
+Harbin Institute of Technology
+
+::: {.meta}
+2015–2019 · Exchange Semester at Monash University, January–June 2018
+:::
+:::
+
+## Technical Toolkit
+
+::: {.toolkit-table}
+| Area | Methods and Tools |
+|:---|:---|
+| Structural Monitoring | Operational modal analysis, system identification, signal processing, acoustic emission, distributed fiber-optic sensing |
+| Simulation | Finite-element and multiphysics modeling; Abaqus, COMSOL, FEniCSx, SOFiSTiK |
+| Machine Learning | PyTorch, TensorFlow, autoencoders, Gaussian processes, surrogate models, normalizing flows, domain adaptation |
+| Probabilistic Assessment | Bayesian inference, model updating, Monte Carlo methods, uncertainty quantification, reliability analysis |
+| Scientific Computing | Python, MATLAB, Git, LaTeX |
+:::
+
+## Selected Recognition
+
+- Best Paper, IWSHM 2025, for a federated-learning monitoring framework (coauthor).
+- Distinguished Graduate Thesis, 2019.
+- International Study Grant, Monash University, 2018.
+- Best Paper, International Conference for Integration of Science, Technology and Society, 2016.
+- “Xu Zengquan” Scholarship, 2016.
+
+## Get in Touch {#contact}
+
+::: {.contact-details}
+I'm happy to hear from fellow engineers, researchers, and anyone curious about the work.
+
+[g3qian@gmail.com](mailto:g3qian@gmail.com)\
+Vancouver, British Columbia, Canada
+
+[Google Scholar](https://scholar.google.com/citations?user=KxP9bSkAAAAJ&hl=en) · [LinkedIn](https://www.linkedin.com/in/guofeng-qian-a01840207/)
+
+[Download CV ↓](files/Guofeng_Qian_CV.pdf){.button .secondary download="Guofeng_Qian_CV.pdf"}
+:::

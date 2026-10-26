@@ -1,0 +1,110 @@
+{
+  "checked_on": "2026-10-25",
+  "method": "doi.org Handle API registration and destination check",
+  "results": [
+    {
+      "id": "journal-translation",
+      "doi": "10.1115/1.4067719",
+      "registered": true,
+      "destinations": [
+        "https://asmedigitalcollection.asme.org/mechanicaldesign/article/147/6/061701/1212254/Enhancing-Bayesian-Inference-Based-Damage"
+      ]
+    },
+    {
+      "id": "journal-cinn",
+      "doi": "10.1115/1.4065845",
+      "registered": true,
+      "destinations": [
+        "https://asmedigitalcollection.asme.org/risk/article/11/1/011105/1201337/Bayesian-Model-Updating-of-Multiscale-Simulations"
+      ]
+    },
+    {
+      "id": "journal-images",
+      "doi": "10.1177/14759217241264291",
+      "registered": true,
+      "destinations": [
+        "https://journals.sagepub.com/doi/10.1177/14759217241264291"
+      ]
+    },
+    {
+      "id": "journal-reliability",
+      "doi": "10.1016/j.ymssp.2023.110619",
+      "registered": true,
+      "destinations": [
+        "https://linkinghub.elsevier.com/retrieve/pii/S0888327023005277"
+      ]
+    },
+    {
+      "id": "journal-physics-ml",
+      "doi": "10.1016/j.ymssp.2023.110515",
+      "registered": true,
+      "destinations": [
+        "https://linkinghub.elsevier.com/retrieve/pii/S0888327023004235"
+      ]
+    },
+    {
+      "id": "journal-river",
+      "doi": "10.2166/hydro.2023.030",
+      "registered": true,
+      "destinations": [
+        "https://iwaponline.com/jh/article/25/5/1799/97368/Machine-learning-enabled-calibration-of-river"
+      ]
+    },
+    {
+      "id": "journal-physics",
+      "doi": "10.1038/s41598-022-25477-8",
+      "registered": true,
+      "destinations": [
+        "https://www.nature.com/articles/s41598-022-25477-8"
+      ]
+    },
+    {
+      "id": "book-digital-twin",
+      "doi": "10.1016/B978-0-443-38315-1.00016-7",
+      "registered": true,
+      "destinations": [
+        "https://linkinghub.elsevier.com/retrieve/pii/B9780443383151000167"
+      ]
+    },
+    {
+      "id": "conf-adaptation",
+      "doi": "10.12783/shm2025/37569",
+      "registered": true,
+      "destinations": [
+        "https://dpi-proceedings.com/index.php/shm2025/article/view/37569"
+      ]
+    },
+    {
+      "id": "conf-ewshm",
+      "doi": "10.58286/29734",
+      "registered": true,
+      "destinations": [
+        "https://www.ndt.net/search/docs.php3?id=29734"
+      ]
+    },
+    {
+      "id": "conf-phm",
+      "doi": "10.36001/phmconf.2024.v16i1.4223",
+      "registered": true,
+      "destinations": [
+        "http://www.papers.phmsociety.org/index.php/phmconf/article/view/4223"
+      ]
+    },
+    {
+      "id": "conf-surrogate",
+      "doi": "10.12783/shm2023/36797",
+      "registered": true,
+      "destinations": [
+        "https://www.dpi-proceedings.com/index.php/shm2023/article/view/36797"
+      ]
+    },
+    {
+      "id": "conf-reliability",
+      "doi": "10.1007/978-3-031-37003-8_16",
+      "registered": true,
+      "destinations": [
+        "https://link.springer.com/10.1007/978-3-031-37003-8_16"
+      ]
+    }
+  ]
+}

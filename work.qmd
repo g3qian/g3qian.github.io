@@ -1,0 +1,34 @@
+---
+title: "Work"
+description: "Five case studies on bridge monitoring, corrosion simulation, reliability, Bayesian model updating, and damage diagnosis across similar structures."
+body-classes: wide-page
+---
+
+::: {.work-intro}
+Each case study starts with a question about a real structure and follows the work from idea to evidence. Bridge monitoring at LPI in Germany comes first.
+
+The next three follow one line of research on corrosion in steel lock gates: simulating it, quantifying its risk, and updating the model with measurements. The final case study explores damage diagnosis across similar structures.
+:::
+
+{{< include includes/work-cards.html >}}
+
+::: {.other-work .home-section #other-work}
+## Other Work
+
+Smaller projects and collaborations that do not have a full case study.
+
+Composite Wing-Spar Debonding · UC San Diego, 2020
+: My first research project: Abaqus models of debonding in composite wing spars, and a deep-learning surrogate that predicts strain response across different debonding locations and sizes. Research assistant.
+
+Value of Information for Structural Monitoring · EURODYN 2026
+: When does monitoring a prestressed bridge with stress-corrosion-cracking risk pay off? Coauthor. [Publication](publications.qmd#conf-voi)
+
+Sensor-Fault Classification · IWSHM 2025
+: Matched-filtering methods to classify faults in structural-monitoring sensor networks. Coauthor. [Publication](publications.qmd#conf-sensor)
+
+Damage Detection Under Changing Temperature · IWSHM 2025
+: On a steel lattice mast near Hannover, adversarial data normalization kept a damage classifier working at temperatures it was not trained on, raising accuracy from 61% to 83% without new labels. Lead author, with J.-H. Bartels; data from Leibniz University Hannover. [Publication](publications.qmd#conf-normalization)
+
+River-Routing Calibration · Journal of Hydroinformatics, 2023
+: Machine-learning-enabled calibration of river-routing model parameters. Coauthor. [Publication](publications.qmd#journal-river)
+:::

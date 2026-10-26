@@ -1,0 +1,12 @@
+/_site/
+/.quarto/
+.DS_Store
+/tmp/
+
+**/*.quarto_ipynb
+
+/_drafts/
+
+# Quarto preview can leave transient HTML beside page sources.
+/*.html
+/work/*.html

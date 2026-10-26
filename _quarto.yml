@@ -1,0 +1,45 @@
+project:
+  type: website
+  output-dir: _site
+  render: ["*.qmd", "work/*.qmd"]
+  pre-render: python3 scripts/generate_content.py
+  resources: ["images/**", "files/**"]
+
+website:
+  site-url: https://g3qian.github.io/
+  title: "Guofeng Qian"
+  description: "Structural engineer connecting monitoring data, physics-based models, and machine learning to decisions about aging infrastructure."
+  favicon: images/favicon.svg
+  search: false
+  open-graph:
+    image: images/og-image.png
+  twitter-card:
+    card-style: summary_large_image
+  navbar:
+    background: light
+    collapse-below: lg
+    right:
+      - {href: work.qmd, text: Work}
+      - {href: experience.qmd, text: Experience}
+      - {href: publications.qmd, text: Publications}
+      - {href: about.qmd, text: About}
+      - {href: files/Guofeng_Qian_CV.pdf, text: "CV ↗"}
+  page-footer:
+    left: "[Email](mailto:g3qian@gmail.com) · [Google Scholar](https://scholar.google.com/citations?user=KxP9bSkAAAAJ&hl=en) · [LinkedIn](https://www.linkedin.com/in/guofeng-qian-a01840207/)"
+    right: "© 2026 Guofeng Qian · Vancouver, BC"
+
+format:
+  html:
+    theme: [cosmo, theme.scss]
+    css: styles.css
+    toc: false
+    anchor-sections: false
+    lightbox: true
+    link-external-newwindow: true
+    smooth-scroll: true
+    include-after-body: includes/accessibility.html
+    grid:
+      body-width: 680px
+      margin-width: 220px
+      gutter-width: 2rem
+lang: en-US
