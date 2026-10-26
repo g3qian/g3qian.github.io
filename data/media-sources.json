@@ -257,33 +257,5 @@
     "width": 1200,
     "height": 800,
     "bytes": 121534
-  },
-  {
-    "file": "images/vibration-testing-model-correlation/modal-test-setup.svg",
-    "source": "Original explanatory SVG based on SE 168/268 Lab 5.1, course testing notes, and seDAQ guide; illustrative sensor positions, not measured results",
-    "width": 1600,
-    "height": 800,
-    "bytes": 2697
-  },
-  {
-    "file": "images/vibration-testing-model-correlation/card.svg",
-    "source": "Original SVG summary of the course cantilever-plate measurement concept",
-    "width": 1200,
-    "height": 800,
-    "bytes": 1329
-  },
-  {
-    "file": "images/vibration-testing-model-correlation/correlation-loop.svg",
-    "source": "Original explanatory SVG based on SE 168/268 Labs 5.2, 6, 7, and 8; workflow only, no assignment solutions",
-    "width": 1600,
-    "height": 900,
-    "bytes": 2196
-  },
-  {
-    "file": "images/vibration-testing-model-correlation/excitation-hardware.webp",
-    "source": "SE 168-268 Data Acquisition System Guide.pdf, pp. 9 and 11; original equipment photos extracted, combined, and labeled",
-    "width": 1600,
-    "height": 800,
-    "bytes": 140908
   }
 ]

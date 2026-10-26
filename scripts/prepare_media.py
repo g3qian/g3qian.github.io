@@ -199,14 +199,5 @@ benchmark = OUT / 'corrosion-reliability/model-runs.svg'
 MANIFEST.append(dict(file='images/corrosion-reliability/model-runs.svg',
     source='Qian, Hu, and Todd, MSSP 200 (2023), 110619, Table 2; local reliability benchmark function evaluations; manually maintained SVG',
     width=1200, height=680, bytes=benchmark.stat().st_size))
-# Teaching schematics are maintained as SVG; equipment extraction has its own helper.
-for filename, width, height, source in [
-    ('modal-test-setup.svg', 1600, 800, 'Original explanatory SVG based on SE 168/268 Lab 5.1, testing notes, and seDAQ guide; illustrative positions'),
-    ('card.svg', 1200, 800, 'Original SVG summary of the course cantilever-plate measurement concept'),
-    ('correlation-loop.svg', 1600, 900, 'Original explanatory SVG based on SE 168/268 Labs 5.2, 6, 7, and 8; no assignment solutions'),
-    ('excitation-hardware.webp', 1600, 800, 'SE 168-268 Data Acquisition System Guide.pdf, pp. 9 and 11; original equipment photos extracted, combined, and labeled'),
-]:
-    asset = OUT/'vibration-testing-model-correlation'/filename
-    MANIFEST.append(dict(file=str(asset.relative_to(ROOT)), source=source, width=width, height=height, bytes=asset.stat().st_size))
 (ROOT/'data/media-sources.json').write_text(json.dumps(MANIFEST,indent=2)+'\n')
 print(f'Prepared {len(MANIFEST)} approved figures; largest: {max(m["bytes"] for m in MANIFEST)//1024} KB')

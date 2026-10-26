@@ -1,13 +1,13 @@
 ---
 title: "Work"
-description: "Six case studies on bridge monitoring, vibration testing and model correlation, corrosion simulation, reliability, Bayesian updating, and damage diagnosis."
+description: "Five case studies on bridge monitoring, corrosion simulation, reliability, Bayesian model updating, and damage diagnosis across similar structures."
 body-classes: wide-page
 ---
 
 ::: {.work-intro}
 Each case study starts with a question about a real structure and follows the work from idea to evidence. Bridge monitoring at LPI in Germany comes first.
 
-Hands-on vibration testing follows, connecting experiments with model correlation. Three corrosion studies cover simulation, reliability, and Bayesian updating, followed by damage diagnosis across similar structures.
+The next three follow one line of research on corrosion in steel lock gates: simulating it, quantifying its risk, and updating the model with measurements. The final case study explores damage diagnosis across similar structures.
 :::
 
 {{< include includes/work-cards.html >}}

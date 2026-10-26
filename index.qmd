@@ -34,7 +34,7 @@ body-classes: "wide-page home-page"
     <div><div class="section-kicker">Monitoring and Modeling</div><h2 id="selected-work-title">Selected Work</h2></div>
     <a href="work.html">Case Studies and Other Work <span aria-hidden="true">→</span></a>
   </div>
-  <p class="section-lead">Six projects connecting bridge monitoring and hands-on vibration testing with corrosion modeling, reliability, Bayesian updating, and damage diagnosis.</p>
+  <p class="section-lead">Five projects, starting with monitoring bridges in service, followed by corrosion modeling, reliability, Bayesian updating, and damage diagnosis.</p>
 ```
 
 {{< include includes/home-cards.html >}}
