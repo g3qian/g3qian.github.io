@@ -1,108 +1,290 @@
 [
   {
-    "objectID": "work/generalized-damage-diagnosis.html",
-    "href": "work/generalized-damage-diagnosis.html",
-    "title": "Generalized Damage Diagnosis Across Similar Structures",
+    "objectID": "work/vibration-testing-model-correlation.html",
+    "href": "work/vibration-testing-model-correlation.html",
+    "title": "Structural Vibration Testing and Model Correlation",
     "section": "",
-    "text": "Postdoctoral Research · UC San Diego · 2024–2025 · USACE/ERDC"
+    "text": "Teaching · UC San Diego · Spring 2022 and 2023 · SE 168/268"
   },
   {
-    "objectID": "work/generalized-damage-diagnosis.html#similar-not-identical",
-    "href": "work/generalized-damage-diagnosis.html#similar-not-identical",
-    "title": "Generalized Damage Diagnosis Across Similar Structures",
-    "section": "Similar, Not Identical",
-    "text": "Similar, Not Identical\nTwo gates of the same type still differ in geometry, boundary conditions, and the water levels they hold back, and a network trained on one can mistake those differences for damage.\nDomain adaptation aims for a diagnosis that is sensitive to damage but not to which structure the data came from. The labeled structure is the source; the structure to diagnose is the target, which contributes unlabeled responses during training."
+    "objectID": "work/vibration-testing-model-correlation.html#one-structure-three-connected-stages",
+    "href": "work/vibration-testing-model-correlation.html#one-structure-three-connected-stages",
+    "title": "Structural Vibration Testing and Model Correlation",
+    "section": "One Structure, Three Connected Stages",
+    "text": "One Structure, Three Connected Stages\nThe course followed a bolted cantilever plate throughout. Students first predicted its vibration, then measured it, and finally reconciled the model with the test. This made the purpose of each exercise concrete: a sensor location, sampling choice, or boundary assumption could affect the final correlation.\n\n\nPre-Test — predict modes, select measurement locations, and plan the test.\nTest — apply a measured force, record responses, and check the data.\nPost-Test — identify modes, correlate the model, and investigate a structural change."
   },
   {
-    "objectID": "work/generalized-damage-diagnosis.html#two-gates-on-the-columbia-river",
-    "href": "work/generalized-damage-diagnosis.html#two-gates-on-the-columbia-river",
-    "title": "Generalized Damage Diagnosis Across Similar Structures",
-    "section": "Two Gates on the Columbia River",
-    "text": "Two Gates on the Columbia River\nI tested the idea on validated finite-element models of two downstream miter gates on the Columbia River. The Dalles was the labeled source, and Bonneville was the unlabeled target.\nOn both, I simulated two common kinds of damage: a gap, where the gate loses contact with the wall at the quoin block, and corrosion, as thickness loss across three zones of the gate. Water levels were sampled within each gate’s measured operating range. A sensitivity analysis then picked the strain-gauge locations that respond most to each type of damage."
+    "objectID": "work/vibration-testing-model-correlation.html#planning-a-test-the-model-can-explain",
+    "href": "work/vibration-testing-model-correlation.html#planning-a-test-the-model-can-explain",
+    "title": "Structural Vibration Testing and Model Correlation",
+    "section": "Planning a Test the Model Can Explain",
+    "text": "Planning a Test the Model Can Explain\nThe early labs built mass, stiffness, and damping models, then moved to a finite-element model of the plate. Target modes and their shapes guided the choice of measurement locations. Guyan reduction connected the many model degrees of freedom to the smaller set available for measurement.\nThat preparation came into the lab. The target frequency band guided the sampling rate, hammer-tip selection, and excitation settings; the decay time helped set the record length. Channel locations, measurement directions, and units had to agree with the model."
   },
   {
-    "objectID": "work/generalized-damage-diagnosis.html#learning-what-the-gates-have-in-common",
-    "href": "work/generalized-damage-diagnosis.html#learning-what-the-gates-have-in-common",
-    "title": "Generalized Damage Diagnosis Across Similar Structures",
-    "section": "Learning What the Gates Have in Common",
-    "text": "Learning What the Gates Have in Common\nA domain-adversarial neural network builds this in through a rivalry. A shared feature generator feeds two heads. One predicts the damage, using labels from the source gate only. The other tries to tell which gate the data came from. Training rewards features that help the first head and defeat the second, so the features keep what reveals damage and drop what reveals the structure.\n\n\n\nThe feature generator serves both a damage predictor, trained on source labels, and a domain classifier that it learns to defeat. Source: IWSHM 2025 presentation.\n\n\nAfter training, the learned features of the two gates line up: for the same amount of damage, both gates produce similar feature values.\n\n\n\nLearned feature values against damage level, with source and target responses following similar trends in several panels. Source: IWSHM 2025 domain-adaptation presentation, slide 10."
+    "objectID": "work/vibration-testing-model-correlation.html#leading-the-vibration-tests",
+    "href": "work/vibration-testing-model-correlation.html#leading-the-vibration-tests",
+    "title": "Structural Vibration Testing and Model Correlation",
+    "section": "Leading the Vibration Tests",
+    "text": "Leading the Vibration Tests\nI led the experiment sessions around two ways of exciting the same plate. For impact testing, I guided students through hammer-tip selection, a clean single hit, and repeated measurements. A double hit or an overloaded channel needed attention while the setup was still available.\nFor shaker testing, I guided band-limited random excitation and the acquisition setup. The load cell measured the applied force, while accelerometers measured the response. Comparing hammer and shaker measurements helped students connect excitation bandwidth, repeatability, and signal quality to the frequency range they wanted to identify.\n\n\n\nThe instrumented hammer provides a short force input; the shaker supplies controlled excitation over a selected band. Equipment photographs from the course seDAQ hardware guide, pages 9 and 11."
   },
   {
-    "objectID": "work/generalized-damage-diagnosis.html#results-on-the-unlabeled-gate",
-    "href": "work/generalized-damage-diagnosis.html#results-on-the-unlabeled-gate",
-    "title": "Generalized Damage Diagnosis Across Similar Structures",
-    "section": "Results on the Unlabeled Gate",
-    "text": "Results on the Unlabeled Gate\nOn the simulated Bonneville test data, mean squared error for gap size fell from 0.069 to 0.015, a 78% reduction from the source-only baseline. Corrosion error fell from 0.221 to 0.114. Target damage labels were used to evaluate predictions after training.\nA statistical check helps explain the difference. Domain adaptation assumes that damage relates to learned features similarly on both gates. Squared conditional maximum mean discrepancy (CMMD²), a measure of that mismatch, was smaller for gaps than for corrosion: 1.37 versus 12.53. Corrosion produced more structure-specific strain responses.\n\n\n\nPredicted versus true normalized damage on Bonneville: gap length (left) and corrosion thickness loss (right). The dashed line marks exact agreement. Source: IWSHM 2025 domain-adaptation presentation, slide 9."
+    "objectID": "work/vibration-testing-model-correlation.html#checking-data-before-leaving-the-lab",
+    "href": "work/vibration-testing-model-correlation.html#checking-data-before-leaving-the-lab",
+    "title": "Structural Vibration Testing and Model Correlation",
+    "section": "Checking Data Before Leaving the Lab",
+    "text": "Checking Data Before Leaving the Lab\nI emphasized checking channel definitions, sensitivity settings, polarity, and signal levels before accepting a record. We inspected time histories for double hits, clipping, and incomplete decay, then checked whether the force spectrum covered the target modes.\nFrequency response functions (FRFs) relate measured acceleration to applied force. Coherence and reciprocity provided further checks on the measurements and channel definitions. A weak response or poor coherence prompted investigation of the excitation, sensor location, and processing choices."
   },
   {
-    "objectID": "work/generalized-damage-diagnosis.html#a-different-route-federated-learning",
-    "href": "work/generalized-damage-diagnosis.html#a-different-route-federated-learning",
-    "title": "Generalized Damage Diagnosis Across Similar Structures",
-    "section": "A Different Route: Federated Learning",
-    "text": "A Different Route: Federated Learning\nDomain adaptation moves knowledge from a labeled structure to an unlabeled one. Federated learning addresses a different situation: several structures each have data, but the data cannot be pooled because of ownership, privacy, or communication cost.\nIn a framework led by Yichao Yang, each gate trains a model locally and shares only model updates, never raw measurements. On three variants of the Greenup finite-element model, it estimated loss-of-contact damage about as accurately as centralized training. The paper received the Best Paper award at IWSHM 2025."
+    "objectID": "work/vibration-testing-model-correlation.html#turning-measurements-into-modes",
+    "href": "work/vibration-testing-model-correlation.html#turning-measurements-into-modes",
+    "title": "Structural Vibration Testing and Model Correlation",
+    "section": "Turning Measurements into Modes",
+    "text": "Turning Measurements into Modes\nThe post-test labs used MATLAB to estimate auto- and cross-spectra, FRFs, and coherence, with averaging and windowing suited to the excitation. Students compared impact and shaker results before choosing the data for modal identification.\nIn IMAT/OPoly, they extracted natural frequencies, damping, and mode shapes, checked stable poles, and compared reconstructed FRFs with the measurements. The sequence separated the quality of the recorded data from the quality of the fitted modal model."
   },
   {
-    "objectID": "work/generalized-damage-diagnosis.html#related-work-with-the-team",
-    "href": "work/generalized-damage-diagnosis.html#related-work-with-the-team",
-    "title": "Generalized Damage Diagnosis Across Similar Structures",
-    "section": "Related Work with the Team",
-    "text": "Related Work with the Team\nAs a coauthor, I also contributed to work led by Yichao Zeng that translates measurements from similar gates into a common domain, then estimates damage with uncertainty through Bayesian inference and model averaging."
+    "objectID": "work/vibration-testing-model-correlation.html#correlating-the-model-and-identifying-a-change",
+    "href": "work/vibration-testing-model-correlation.html#correlating-the-model-and-identifying-a-change",
+    "title": "Structural Vibration Testing and Model Correlation",
+    "section": "Correlating the Model and Identifying a Change",
+    "text": "Correlating the Model and Identifying a Change\nThe final stage compared test and model frequencies, mode shapes, and FRFs. Mode matching, modal assurance, and cross-orthogonality helped establish which modes could be compared. Model updating then adjusted uncertain plate and boundary stiffnesses, rather than assuming the bolted edge was perfectly fixed.\n\n\n\n\nTest and analysis must describe the same coordinates and units before their modes and FRFs are compared. Updating revises uncertain physical parameters, and a new measurement set tests the resulting model. Original summary of the course’s correlation sequence.\n\n\n\nThe final project introduced an added spring at an unknown location. Students used a new measurement set and their correlated baseline model to estimate its location and stiffness, then explain their reasoning across the full test-and-analysis process."
   },
   {
-    "objectID": "work/generalized-damage-diagnosis.html#what-it-means",
-    "href": "work/generalized-damage-diagnosis.html#what-it-means",
-    "title": "Generalized Damage Diagnosis Across Similar Structures",
+    "objectID": "work/vibration-testing-model-correlation.html#what-it-means",
+    "href": "work/vibration-testing-model-correlation.html#what-it-means",
+    "title": "Structural Vibration Testing and Model Correlation",
     "section": "What It Means",
-    "text": "What It Means\nTogether, these studies move damage diagnosis from a single, well-studied structure toward a population of similar ones, which is the situation most owners actually face. Transfer works best when damage affects both structures in a similar way, and a statistical check can show where it falls short.\nPublications\nEnhancing Bayesian Inference-Based Damage Diagnostics Through Domain Translation with Application to Miter Gates. Journal of Mechanical Design, 147(6), 061701, 2025. DOI ↗\nGeneralized Damage Diagnostics of Two Miter Gates Through Domain Adaptation. 15th International Workshop on Structural Health Monitoring (IWSHM), Stanford, California, 2025. DOI ↗\nA Privacy-Preserving Framework Using Federated Learning for Structural Health Monitoring with Miter Gates Application. IWSHM, Stanford, California, 2025 · Best Paper (coauthor). DOI ↗\nDamage Diagnostics of Miter Gates Using Domain Adaptation and Normalizing Flow-Based Likelihood-Free Inference. Annual Conference of the PHM Society, 16(1), 2024. DOI ↗\n\nPrevious Case Study← Bayesian Model UpdatingOverviewAll Case Studies →"
+    "text": "What It Means\nMy main contribution was making the experimental stage work: connecting instrumentation and excitation choices to trustworthy measurements, then helping students use those measurements in a dynamic model. These experimental modal-analysis skills carry across structural, mechanical, and aerospace testing: plan the test, troubleshoot at the bench, and explain the agreement or discrepancy with analysis."
   },
   {
-    "objectID": "work/corrosion-reliability.html",
-    "href": "work/corrosion-reliability.html",
-    "title": "Uncertainty Propagation and Reliability Analysis",
+    "objectID": "work/vibration-testing-model-correlation.html#course-context",
+    "href": "work/vibration-testing-model-correlation.html#course-context",
+    "title": "Structural Vibration Testing and Model Correlation",
+    "section": "Course Context",
+    "text": "Course Context\nSE 168/268, Structural System Testing and Model Correlation, UC San Diego. Co-taught by Prof. Michael Todd and engineers from ATA Engineering. Teaching assistant, Spring 2022 and 2023. UC San Diego Course Catalog ↗"
+  },
+  {
+    "objectID": "work/corrosion-simulation.html",
+    "href": "work/corrosion-simulation.html",
+    "title": "Multiphysics Corrosion Simulation and Surrogate Modeling",
     "section": "",
-    "text": "Doctoral Research · UC San Diego · 2022–2023 · USACE/ERDC"
+    "text": "Doctoral Research · UC San Diego · 2021–2023 · USACE/ERDC"
   },
   {
-    "objectID": "work/corrosion-reliability.html#where-the-uncertainty-comes-from",
-    "href": "work/corrosion-reliability.html#where-the-uncertainty-comes-from",
-    "title": "Uncertainty Propagation and Reliability Analysis",
-    "section": "Where the Uncertainty Comes From",
-    "text": "Where the Uncertainty Comes From\nNothing about a gate in service is fixed. Water levels change with every lock operation, a gap can open where the gate should bear against the wall, and the water’s chemistry and temperature change how fast steel corrodes. I gave each of these a probability distribution.\n\n\nSources of uncertainty in the reliability analysis, after MSSP 2023\n\n\nVariable\nWhat Drives It\nModel\n\n\n\n\nUpstream water level\nWaterway elevation management\nGaussian\n\n\nDownstream water level\nLock operation\nWeibull\n\n\nGap length at the quoin block\nLoss of contact between gate and wall\nRandom variable\n\n\nReaction constant\nWater chemistry and temperature\nGaussian\n\n\nDiffusion coefficient\nWater chemistry and temperature\nGaussian\n\n\n\n\nTo characterize changing loads in the broader simulation study, I used USGS water levels recorded every 15 minutes at Greenup Dam. I separated the record into a trend and random fluctuations, then used a Karhunen–Loève expansion to generate water-level histories. The reliability analysis used the distributions summarized above.\n\n\n\n\nThe measured record is split into trend and noise, and new water-level histories are generated with the same statistics. Source: doctoral defense presentation; data from the USGS gauge at Greenup Dam."
+    "objectID": "work/corrosion-simulation.html#a-corrosion-model-that-feels-stress",
+    "href": "work/corrosion-simulation.html#a-corrosion-model-that-feels-stress",
+    "title": "Multiphysics Corrosion Simulation and Surrogate Modeling",
+    "section": "A Corrosion Model That Feels Stress",
+    "text": "A Corrosion Model That Feels Stress\nMost corrosion models used in practice are empirical curves fitted to past data, which rarely exist for gates like these. I built one on the physics instead.\nThe phase-field model couples four sets of equations: the electrochemical reaction at the metal surface, the transport of dissolved ions, the electric potential, and mechanical equilibrium. Because stress enters the reaction kinetics, the model can tell tension from compression, which many earlier phase-field models did not capture.\nThe results matched physical intuition. Tension makes pits deeper and sharper, compression flattens them, and shear tilts their growth. Cyclic loading also produced crack-like tails in some simulations.\n\n\n\nThe same pit grows differently under tension, no load, and compression, shown with the hydrostatic stress around it. Source: Scientific Reports 2022."
   },
   {
-    "objectID": "work/corrosion-reliability.html#from-an-uncertain-pit-to-a-distribution-of-crack-times",
-    "href": "work/corrosion-reliability.html#from-an-uncertain-pit-to-a-distribution-of-crack-times",
-    "title": "Uncertainty Propagation and Reliability Analysis",
-    "section": "From an Uncertain Pit to a Distribution of Crack Times",
-    "text": "From an Uncertain Pit to a Distribution of Crack Times\nThe surrogate from the first project carries its own uncertainty. Because it runs in seconds, I could propagate that uncertainty by Monte Carlo simulation: thousands of possible pit histories, each checked against the crack-initiation criterion. The result is not one crack-initiation time but a distribution, together with where on the pit the crack is likely to start.\n\n\n\n\nDistributions of crack-initiation time and location for two loading cases, compared with the full simulation (red). Source: doctoral defense presentation; Scientific Reports 2022."
+    "objectID": "work/corrosion-simulation.html#stress-based-crack-initiation",
+    "href": "work/corrosion-simulation.html#stress-based-crack-initiation",
+    "title": "Multiphysics Corrosion Simulation and Surrogate Modeling",
+    "section": "Stress-Based Crack Initiation",
+    "text": "Stress-Based Crack Initiation\nAs a pit deepens and sharpens, stress concentrates at its tip. I used the pit depth and tip curvature to estimate this concentration, then proposed a crack-initiation criterion based on whether the local stress reaches the von Mises yield limit.\n\n\n\n\nThe same pit is shown as morphology (left) and a stress field (right), with both domains at the same scale. Stress concentrates at the sharpened tip. This local concentration drives the crack-initiation check. Source: doctoral defense presentation, slide 57.\n\n\n\nI compared this stress-based criterion with the Tsujikawa–Kondo criterion, which compares crack and pit growth rates. In the simulated example, the stress-based criterion gives an earlier, more stable initiation prediction: its stress history rises smoothly, while the growth-rate indicator fluctuates.\n\n\n\n\nThe stress-based criterion (red, left axis) reaches its 410 MPa threshold before the growth-rate criterion (blue, right axis) reaches its threshold of Kv = 2. Insets show the pit at the two predicted initiation points. Source: dissertation, Fig. 2.5; doctoral defense, slide 58."
   },
   {
-    "objectID": "work/corrosion-reliability.html#two-scales-two-surrogates",
-    "href": "work/corrosion-reliability.html#two-scales-two-surrogates",
-    "title": "Uncertainty Propagation and Reliability Analysis",
-    "section": "Two Scales, Two Surrogates",
-    "text": "Two Scales, Two Surrogates\nNext came the whole gate. A validated, 64,919-element Abaqus model of the Greenup miter gate turns water levels and gap length into local stresses. I ran it 1,000 times and trained a global surrogate on the results; nine features captured 95% of the variation in the gate’s strain response.\nA second, local surrogate turns those stresses, together with the uncertain corrosion parameters, into the probability that a crack starts within two years.\n\n\n\n\nWater levels and gap length drive the gate model; its stresses and the environment drive the pit model. Source: MSSP 2023."
+    "objectID": "work/corrosion-simulation.html#a-40-minute-simulation-in-seconds",
+    "href": "work/corrosion-simulation.html#a-40-minute-simulation-in-seconds",
+    "title": "Multiphysics Corrosion Simulation and Surrogate Modeling",
+    "section": "A 40-Minute Simulation in Seconds",
+    "text": "A 40-Minute Simulation in Seconds\nA physics model this detailed is slow: each run took over 40 minutes. Risk analysis needs thousands of runs, so I built a surrogate.\nFrom 255 simulations, a convolutional autoencoder learned to describe each 80 × 40 corrosion image with just six numbers, where principal component analysis would need hundreds.\nI then trained Gaussian-process nonlinear autoregressive models with exogenous inputs (GP-NARX) to forecast those six features. Each prediction uses the previous five time steps together with the applied stress and corrosion parameters. Feeding predictions back into the model gives a longer forecast, with uncertainty, which the decoder turns back into corrosion images.\n\n\n\n\nThe CNN encoder maps a corrosion image into six features. GP-NARX forecasts those features recursively from their recent history and the physical inputs; the decoder reconstructs future pit shapes. Source: dissertation, Fig. 3.1; doctoral defense, slide 35.\n\n\n\n\n\n\n\nEach row shows a later time: the original simulation, the mean forecast and its error, then the decoded Gaussian-process mean and its error. Source: doctoral defense, slide 46; Scientific Reports 2022."
   },
   {
-    "objectID": "work/corrosion-reliability.html#spending-simulations-where-they-matter",
-    "href": "work/corrosion-reliability.html#spending-simulations-where-they-matter",
-    "title": "Uncertainty Propagation and Reliability Analysis",
-    "section": "Spending Simulations Where They Matter",
-    "text": "Spending Simulations Where They Matter\nFor this reliability calculation, accurate predictions near the boundary between “safe” and “cracked” matter most. I combined importance sampling, Gaussian mixture models, and active learning to add training runs near that boundary, with a stopping rule based on a conservative bound on the probability error.\nAcross eleven stress conditions, the local benchmark required 101 function evaluations, compared with 674 for adaptive Kriging Monte Carlo simulation (AK-MCS). The benchmark used a Gaussian-process approximation of the phase-field model as its reference model.\n\n\n\n\nFunction evaluations in the local reliability benchmark, grouped by stress condition. Totals: 101 for the proposed method and 674 for AK-MCS. Redrawn from MSSP 2023, Table 2."
+    "objectID": "work/corrosion-simulation.html#keeping-the-surrogate-physical",
+    "href": "work/corrosion-simulation.html#keeping-the-surrogate-physical",
+    "title": "Multiphysics Corrosion Simulation and Surrogate Modeling",
+    "section": "Keeping the Surrogate Physical",
+    "text": "Keeping the Surrogate Physical\nTo keep long forecasts consistent with continuing material loss, I contributed my phase-field simulations and baseline surrogate to a physics-constrained version. Its loss function penalizes predictions in which corroded material reappears.\nThe extension reduced mean squared error from 0.0125 to 0.0066. In the published benchmark, forecasting 200 time steps took 1.3 seconds with the extension and 5.4 seconds with the original surrogate, after training.\n\n\n\n\nThe physics loss constrains material loss while the encoder and decoder compress and reconstruct pit shapes. Source: MSSP 2023, 110515."
   },
   {
-    "objectID": "work/corrosion-reliability.html#why-risk-concentrates-low-on-the-gate",
-    "href": "work/corrosion-reliability.html#why-risk-concentrates-low-on-the-gate",
-    "title": "Uncertainty Propagation and Reliability Analysis",
-    "section": "Why Risk Concentrates Low on the Gate",
-    "text": "Why Risk Concentrates Low on the Gate\nPutting the pieces together gives the map at the top of this page. Risk concentrates near the bottom and below the waterline for two reasons: stresses are highest at the bottom, and steel corrodes faster in water than in air. A similar pattern appears on retired gates."
-  },
-  {
-    "objectID": "work/corrosion-reliability.html#what-it-means",
-    "href": "work/corrosion-reliability.html#what-it-means",
-    "title": "Uncertainty Propagation and Reliability Analysis",
+    "objectID": "work/corrosion-simulation.html#what-it-means",
+    "href": "work/corrosion-simulation.html#what-it-means",
+    "title": "Multiphysics Corrosion Simulation and Surrogate Modeling",
     "section": "What It Means",
-    "text": "What It Means\nThe analysis turns uncertain loads and corrosion parameters into a spatial forecast that can help prioritize inspections. It also makes the link between assumed conditions and predicted risk explicit. The next step was to update those corrosion parameters with measurements.\nPublications\nPhysics-Based Corrosion Reliability Analysis of Miter Gates Using Multi-Scale Simulations and Adaptive Surrogate Modeling. Mechanical Systems and Signal Processing, 200, 110619, 2023. DOI ↗\nThe Use of Digital Twin Architectures in Structural Health Monitoring and Management of the Inland Waterways Navigation Civil Infrastructure. In Condition Monitoring and Structural Health Monitoring of Infrastructure Systems, edited by Vistasp M. Karbhari and Farhad Ansari. Woodhead Publishing, pp. 675–718, 2026. DOI ↗\nPhysics-Based Corrosion Reliability Analysis of Miter Gates Using Multiscale Simulations and Adaptive Surrogate Modeling. Model Validation and Uncertainty Quantification, Volume 3, SEM Conference Proceedings, Springer, pp. 101–105, 2023. DOI ↗\n\nPrevious Case Study← Corrosion SimulationNext Case StudyBayesian Model Updating →"
+    "text": "What It Means\nThe phase-field model explains how load shapes corrosion, and the surrogate makes that physics fast enough to run thousands of times. That speed is what made the next step possible: carrying uncertainty through the model to a risk map of an entire gate. Later, I mentored Haiwei Lin in extending the model from crack initiation to crack growth.\nPublications\nCorrosion Morphology Prediction of Civil Infrastructure Using a Physics-Constrained Machine Learning Method. Mechanical Systems and Signal Processing, 200, 110515, 2023. DOI ↗\nA Probabilistic Computational Framework for the Prediction of Corrosion-Induced Cracking in Large Structures. Scientific Reports, 12, 20898, 2022. DOI ↗\nMulti-Scale Multi-Mode Damage Simulation for Miter Gates. Model Validation and Uncertainty Quantification, SEM Conference Proceedings, Springer, 2025.\nA Hybrid Surrogate Modeling Method for Corrosion Morphology Prediction Under Non-Stationary Dynamic Loading. 14th International Workshop on Structural Health Monitoring (IWSHM), Stanford, California, pp. 643–650, 2023. DOI ↗\n\nPrevious Case Study← Vibration TestingNext Case StudyUncertainty and Reliability →"
+  },
+  {
+    "objectID": "work/corrosion-model-updating.html",
+    "href": "work/corrosion-model-updating.html",
+    "title": "Bayesian Model Updating with Real Measurements",
+    "section": "",
+    "text": "Doctoral and Postdoctoral Research · UC San Diego with Cal Poly · 2022–2025"
+  },
+  {
+    "objectID": "work/corrosion-model-updating.html#updating-from-synthetic-corrosion-images",
+    "href": "work/corrosion-model-updating.html#updating-from-synthetic-corrosion-images",
+    "title": "Bayesian Model Updating with Real Measurements",
+    "section": "Updating from Synthetic Corrosion Images",
+    "text": "Updating from Synthetic Corrosion Images\nI first developed and tested the image-based methods using synthetic inspection images rendered in Blender from simulated corrosion. Their known model parameters provided a reference for checking the inference. The observations used for updating were the pit counts and opening sizes extracted from those images.\nA U-Net finds the pits, and super-resolution and circle detection measure their openings. A two-stage method called approximate Bayesian computation (ABC) updates the model: pit counts inform how pits start, and opening widths inform how fast they grow. Once updated, the physics predicts pit depth, which the camera cannot see.\n\n\n\n\nA U-Net segments pits in a Blender-rendered inspection image; thresholding then defines their openings. Source: doctoral defense presentation, slide 74."
+  },
+  {
+    "objectID": "work/corrosion-model-updating.html#faster-inference-for-the-image-study",
+    "href": "work/corrosion-model-updating.html#faster-inference-for-the-image-study",
+    "title": "Bayesian Model Updating with Real Measurements",
+    "section": "Faster Inference for the Image Study",
+    "text": "Faster Inference for the Image Study\nABC found parameters by rerunning the model again and again, which took hours. I replaced that search with two trained networks: a summary network that condenses the observations, and a conditional invertible neural network that turns them directly into plausible parameter values.\nIn this synthetic-image benchmark, about five hours of training reduced each update from four hours to four seconds. Posterior standard deviations were roughly four to seven times smaller than with ABC. That speed makes repeated updating practical."
+  },
+  {
+    "objectID": "work/corrosion-model-updating.html#updating-from-real-laser-scans",
+    "href": "work/corrosion-model-updating.html#updating-from-real-laser-scans",
+    "title": "Bayesian Model Updating with Real Measurements",
+    "section": "Updating from Real Laser Scans",
+    "text": "Updating from Real Laser Scans\nI then worked with Duncan Fure and Long Wang at Cal Poly on real corrosion measurements. Stainless-steel specimens were corroded in ferric chloride at 50 °C for 15 minutes to 3 hours, then laser-scanned at 4 µm spacing in the surface plane. I extracted pit-opening radius distributions from these scans for model updating.\n\n\n\nReal laser-scan depth maps at 0.25, 0.5, 1, 2, and 3 hours of exposure (a–e), with one pit enlarged (f). Color gives depth below the surface in millimeters. Source: IWSHM 2025 model-updating presentation, slide 9.\n\n\nI updated a hybrid model of phase-field pit growth and probabilistic pit initiation using the first four exposure times. A summary network and conditional invertible neural network inferred parameter distributions from the measured pit-size distributions. The three-hour scans were reserved for checking the forecast.\n\n\n\n\nInference workflow for the real laser-scan study: the summary network condenses the observed pit-size distributions, and the inference network estimates model parameters. Green arrows show training; dashed red arrows show inference. Source: IWSHM 2025 model-updating presentation, slide 11."
+  },
+  {
+    "objectID": "work/corrosion-model-updating.html#what-the-measurements-tell-the-model",
+    "href": "work/corrosion-model-updating.html#what-the-measurements-tell-the-model",
+    "title": "Bayesian Model Updating with Real Measurements",
+    "section": "What the Measurements Tell the Model",
+    "text": "What the Measurements Tell the Model\nThe experimental observations concentrated the posterior distributions of the pit-initiation parameters λ and β and the reaction parameter θ₁. The diffusion parameter θ₂ remained broadly distributed, showing that these measurements constrain reaction kinetics more strongly than diffusion under the accelerated-test conditions.\n\n\n\nParameter distributions updated from the real laser-scan observations: priors in green, posteriors in red, and posterior means in black. Initiation and reaction parameters concentrate, while the diffusion parameter remains broad. Source: IWSHM 2025 model-updating presentation, slide 13; JCSHM manuscript, Fig. 10."
+  },
+  {
+    "objectID": "work/corrosion-model-updating.html#forecasting-the-pit-size-distribution",
+    "href": "work/corrosion-model-updating.html#forecasting-the-pit-size-distribution",
+    "title": "Bayesian Model Updating with Real Measurements",
+    "section": "Forecasting the Pit-Size Distribution",
+    "text": "Forecasting the Pit-Size Distribution\nI propagated these posterior parameter distributions through the model to forecast pit sizes at the held-out three-hour time point. The updated model predicted a 95th-percentile radius of 0.169 mm, against 0.190 mm measured and 0.286 mm from the power law: errors of −11% and +51%, respectively.\nThe mean pit count was also close: 760 predicted, against 804 observed.\n\n\n\nPit-opening radius percentiles over time. At the held-out three-hour point, model updating is closer to the measurements for the 50th, 75th, and 95th percentiles. Source: IWSHM 2025 model-updating presentation, slide 15; JCSHM manuscript, Table 2."
+  },
+  {
+    "objectID": "work/corrosion-model-updating.html#what-it-means",
+    "href": "work/corrosion-model-updating.html#what-it-means",
+    "title": "Bayesian Model Updating with Real Measurements",
+    "section": "What It Means",
+    "text": "What It Means\nThe synthetic-image study established the observation-to-parameter workflow and made inference fast. The laser-scan study carried that workflow into real experiments, from measured pit sizes to posterior parameters and a later-time forecast. Together, they show how repeated observations can refine corrosion predictions.\nView the Model-Updating Code on GitHub ↗\nPublications\nMachine Learning-Enabled Probabilistic Hybrid Model Updating of Pitting Corrosion with Application to Hydraulic Steel Structures: An Experimental Validation. Journal of Civil Structural Health Monitoring, accepted.\nBayesian Model Updating of Multiscale Simulations Informing Corrosion Prognostics Using Conditional Invertible Neural Networks. ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part B: Mechanical Engineering, 11(1), 011105, 2025. DOI ↗\nPitting Corrosion Diagnostics and Prognostics for Miter Gates Using Multiscale Simulation and Image Inspection Data. Structural Health Monitoring, 2024. DOI ↗\nPitting Corrosion Model Updating Using Experimental Data. IWSHM, Stanford, California, 2025.\nLikelihood-Free Bayesian Inference for Localized Corrosion in Miter Gates. Model Validation and Uncertainty Quantification, SEM Conference Proceedings, Springer, 2025.\nPitting Corrosion Monitoring Framework for Miter Gates with Digital Twin. 11th European Workshop on Structural Health Monitoring (EWSHM), Potsdam, Germany, 2024. DOI ↗\nMultiscale Corrosion Damage Diagnostics and Prognostics for a Miter Gate. Model Validation and Uncertainty Quantification, SEM Conference Proceedings, Springer, 2024.\n\nPrevious Case Study← Uncertainty and ReliabilityNext Case StudyGeneralized Damage Diagnosis →"
+  },
+  {
+    "objectID": "work.html",
+    "href": "work.html",
+    "title": "Work",
+    "section": "",
+    "text": "Each case study starts with a question about a real structure and follows the work from idea to evidence. Bridge monitoring at LPI in Germany comes first.\nHands-on vibration testing follows, connecting experiments with model correlation. Three corrosion studies cover simulation, reliability, and Bayesian updating, followed by damage diagnosis across similar structures."
+  },
+  {
+    "objectID": "work.html#other-work",
+    "href": "work.html#other-work",
+    "title": "Work",
+    "section": "Other Work",
+    "text": "Other Work\nSmaller projects and collaborations that do not have a full case study.\n\nComposite Wing-Spar Debonding · UC San Diego, 2020\n\nMy first research project: Abaqus models of debonding in composite wing spars, and a deep-learning surrogate that predicts strain response across different debonding locations and sizes. Research assistant.\n\nValue of Information for Structural Monitoring · EURODYN 2026\n\nWhen does monitoring a prestressed bridge with stress-corrosion-cracking risk pay off? Coauthor. Publication\n\nSensor-Fault Classification · IWSHM 2025\n\nMatched-filtering methods to classify faults in structural-monitoring sensor networks. Coauthor. Publication\n\nDamage Detection Under Changing Temperature · IWSHM 2025\n\nOn a steel lattice mast near Hannover, adversarial data normalization kept a damage classifier working at temperatures it was not trained on, raising accuracy from 61% to 83% without new labels. Lead author, with J.-H. Bartels; data from Leibniz University Hannover. Publication\n\nRiver-Routing Calibration · Journal of Hydroinformatics, 2023\n\nMachine-learning-enabled calibration of river-routing model parameters. Coauthor. Publication"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hi, I'm Guofeng Qian.",
+    "section": "",
+    "text": "Structural Engineer · Researcher · Vancouver\n    Hi, I'm Guofeng Qian.\n    I study how structures age, and how measurements and models can tell us about it before it becomes a problem.\n    My work combines structural health monitoring, physics-based simulation, and machine learning, from corrosion on U.S. navigation-lock gates to highway bridges in Germany.\n    Ph.D., UC San Diego · Formerly R&D Engineer at LPI, Hannover · Now in Vancouver, BC\n    \n      Explore My Work →\n      More About Me →\n    \n    \n      Email ↗\n      Google Scholar ↗\n      LinkedIn ↗\n      CV ↗\n    \n  \n  \n    \n    Beneath one of two twin highway bridges I monitored in Germany.\n  \n\n\n  \n    Monitoring and ModelingSelected Work\n    Case Studies and Other Work →\n  \n  Six projects connecting bridge monitoring and hands-on vibration testing with corrosion modeling, reliability, Bayesian updating, and damage diagnosis.\n\n\n  \n  Engineering Practice · LPI · 2025–2026Operational Modal Analysis and Temperature Effects on Natural FrequenciesAutomated modal identification on twin bridges: the damaged one vibrates lower (3.44 vs 3.52 Hz) and responds differently to temperature.Operational Modal Analysis · Monitoring↗\n\n\n  \n  Teaching · UC San Diego · Spring 2022 and 2023Structural Vibration Testing and Model CorrelationLed experimental sessions connecting impact-hammer and shaker measurements to modal identification and finite-element model correlation.Experimental Modal Analysis · Test–Model Correlation↗\n\n\n  \n  Doctoral Research · UC San Diego · 2021–2023Multiphysics Corrosion Simulation and Surrogate ModelingStress-aware simulations of how pits grow into cracks, and surrogates that forecast 200 time steps in 1.3–5.4 seconds after training.Phase-Field Modeling · Machine Learning↗\n\n\n  \n  Doctoral Research · UC San Diego · 2022–2023Uncertainty Propagation and Reliability AnalysisA gate-wide crack-initiation risk map, with 6.7× fewer evaluations in the local reliability benchmark.Reliability · Adaptive Surrogates↗\n\n\n  \n  Doctoral and Postdoctoral Research · UC San Diego with Cal Poly · 2022–2025Bayesian Model Updating with Real MeasurementsFour-second model updates, and a laboratory forecast of the 95th-percentile pit-opening radius with 11% error, versus 51% for a power law.Bayesian Inference · Experiments↗\n\n\n  \n  Postdoctoral Research · UC San Diego · 2024–2025Generalized Damage Diagnosis Across Similar StructuresOn simulated gate responses, transferring knowledge from The Dalles cut gap-prediction error on Bonneville by 78%.Domain Adaptation · Population-Based SHM↗\n\n\n\n\n  What I DoThree Questions Behind My Work\n  Across these projects, in research and in practice, the work comes back to the same three questions.\n  \n    01 · MonitorHow Is the Structure Behaving?Reading a structure's response through vibration, strain, acoustic emission, and fiber-optic sensing, and separating real change from the effects of temperature and traffic.\n    02 · ModelWhat Is Happening Inside?Building finite-element and multiphysics models of damage we cannot see directly, then using machine learning so they run fast enough to explore uncertainty.\n    03 · DecideWhat Should We Do Next?Combining models and measurements through Bayesian updating and reliability analysis, so that inspection and maintenance choices rest on evidence.\n  \n\n\n  NewsRecentlyAll Publications →\n  \n    2026Presented Our Study of Temperature Effects on Bridge FrequenciesLead Author · EWSHM 2026, Toulouse\n    2026When Does Structural Monitoring Pay Off?Coauthor · EURODYN 2026, Hannover\n    2026Testing a Corrosion Model Against Laboratory ExperimentsAccepted · Journal of Civil Structural Health Monitoring\n    2026Digital-Twin Architectures for Inland Waterway InfrastructureBook Chapter · Woodhead Publishing\n    2025Best Paper Award for a Federated-Learning Monitoring FrameworkCoauthor · IWSHM 2025, Stanford\n  \n\n\n  Say HelloI'm always glad to talk about structural monitoring, digital twins, or an interesting engineering problem.\n  Get in Touch ↗"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "Structural Engineer · Researcher · Vancouver, BC\nThat curiosity has taken me across four countries. I studied civil engineering at Harbin Institute of Technology in China, with an exchange semester at Monash University in Australia. I then moved to UC San Diego, where I earned my M.S. and Ph.D. in structural engineering with Prof. Michael Todd.\nAt UC San Diego, in a research program supported by the U.S. Army Corps of Engineers, I studied pitting corrosion on the steel gates of navigation locks.\nI simulated it with multiphysics models and machine-learning surrogates, carried its uncertainty through to a reliability analysis of a whole gate, and updated the models with laboratory measurements. As a postdoc, I turned to diagnosing damage across many similar structures.\nIn 2025, I joined LPI Ingenieurgesellschaft in Hannover, Germany, to look at the same question from the field: bridges in service. There I automated operational modal analysis of long-term monitoring data, studied how temperature shifts the natural frequencies of an intact and a damaged bridge, and helped interpret field measurements for bridge owners.\nTeaching and mentoring have been a rewarding part of the journey, from running modal-testing labs to guiding students through their first research projects. You can read more on the Experience page, or browse the case studies."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About Me",
+    "section": "Education",
+    "text": "Education\n\nPh.D. in Structural Engineering\nUniversity of California San Diego\n\n2021–2023 · Advisor: Prof. Michael D. Todd\n\nDissertation: Diagnostics and Prognostics of Pitting Corrosion in Large Civil Infrastructure Using Multi-Scale Simulation and Machine Learning.\n\n\nM.S. in Structural Engineering\nUniversity of California San Diego\n\n2019–2020 · Health Monitoring and Nondestructive Evaluation\n\n\n\nB.Eng. in Civil Engineering\nHarbin Institute of Technology\n\n2015–2019 · Exchange Semester at Monash University, January–June 2018"
+  },
+  {
+    "objectID": "about.html#technical-toolkit",
+    "href": "about.html#technical-toolkit",
+    "title": "About Me",
+    "section": "Technical Toolkit",
+    "text": "Technical Toolkit\n\n\n\n\n\n\n\n\nArea\nMethods and Tools\n\n\n\n\nStructural Monitoring\nOperational modal analysis, system identification, signal processing, acoustic emission, distributed fiber-optic sensing\n\n\nSimulation\nFinite-element and multiphysics modeling; Abaqus, COMSOL, FEniCSx, SOFiSTiK\n\n\nMachine Learning\nPyTorch, TensorFlow, autoencoders, Gaussian processes, surrogate models, normalizing flows, domain adaptation\n\n\nProbabilistic Assessment\nBayesian inference, model updating, Monte Carlo methods, uncertainty quantification, reliability analysis\n\n\nScientific Computing\nPython, MATLAB, Git, LaTeX"
+  },
+  {
+    "objectID": "about.html#selected-recognition",
+    "href": "about.html#selected-recognition",
+    "title": "About Me",
+    "section": "Selected Recognition",
+    "text": "Selected Recognition\n\nBest Paper, IWSHM 2025, for a federated-learning monitoring framework (coauthor).\nDistinguished Graduate Thesis, 2019.\nInternational Study Grant, Monash University, 2018.\nBest Paper, International Conference for Integration of Science, Technology and Society, 2016.\n“Xu Zengquan” Scholarship, 2016."
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About Me",
+    "section": "Get in Touch",
+    "text": "Get in Touch\n\nI’m happy to hear from fellow engineers, researchers, and anyone curious about the work.\ng3qian@gmail.com\nVancouver, British Columbia, Canada\nGoogle Scholar · LinkedIn\nDownload CV ↓"
+  },
+  {
+    "objectID": "experience.html",
+    "href": "experience.html",
+    "title": "Experience",
+    "section": "",
+    "text": "My experience moves from the lab to the field: doctoral and postdoctoral research at UC San Diego, then engineering practice in Germany. Along the way, teaching and mentoring became an important part of the work. The most recent role comes first."
+  },
+  {
+    "objectID": "experience.html#rd-engineer",
+    "href": "experience.html#rd-engineer",
+    "title": "Experience",
+    "section": "R&D Engineer",
+    "text": "R&D Engineer\n\nLPI Ingenieurgesellschaft mbH\n\nAt LPI, I brought my research background to bridges in service, working on structural monitoring and condition assessment.\n\nAutomated operational modal analysis of long-term monitoring data, with bootstrap uncertainty bounds.\nStudied how temperature shifts the natural frequencies of two twin bridges, one with documented tendon damage.\nInterpreted strain, displacement, inclination, acoustic-emission, and fiber-optic measurements for bridge owners, and automated parametric SOFiSTiK models with Python.\n\n\nOperational Modal Analysis and Temperature Effects →"
+  },
+  {
+    "objectID": "experience.html#postdoctoral-researcher",
+    "href": "experience.html#postdoctoral-researcher",
+    "title": "Experience",
+    "section": "Postdoctoral Researcher",
+    "text": "Postdoctoral Researcher\n\nUniversity of California San Diego\n\nAfter my Ph.D., I extended the USACE/ERDC-supported research program from single structures to populations of similar structures, and tested the corrosion model against experiments.\n\nDeveloped generalized damage diagnosis that uses labeled data from one structure to diagnose a similar, unlabeled structure.\nValidated Bayesian updating of the corrosion model against laboratory corrosion experiments.\nContributed to proposals and semiannual sponsor reviews, and mentored graduate and undergraduate researchers.\n\n\nGeneralized Damage Diagnosis → · Bayesian Model Updating →"
+  },
+  {
+    "objectID": "experience.html#graduate-student-researcher",
+    "href": "experience.html#graduate-student-researcher",
+    "title": "Experience",
+    "section": "Graduate Student Researcher",
+    "text": "Graduate Student Researcher\n\nUniversity of California San Diego\n\nMy doctoral research asked how to diagnose and predict pitting corrosion in large civil infrastructure.\n\nBuilt a multiphysics phase-field corrosion model and machine-learning surrogates that run it in seconds.\nPropagated uncertainty from loads, chemistry, and models to a reliability analysis of an entire gate.\nDeveloped Bayesian model updating from inspection images.\n\n\nCorrosion Simulation → · Uncertainty and Reliability → · Bayesian Model Updating →"
+  },
+  {
+    "objectID": "experience.html#research-assistant",
+    "href": "experience.html#research-assistant",
+    "title": "Experience",
+    "section": "Research Assistant",
+    "text": "Research Assistant\n\nUniversity of California San Diego\n\nMy first research project: Abaqus models of debonding in composite aircraft wing spars, and a deep-learning surrogate for strain response across damage locations and sizes."
+  },
+  {
+    "objectID": "experience.html#teaching",
+    "href": "experience.html#teaching",
+    "title": "Experience",
+    "section": "Teaching",
+    "text": "Teaching\nTeaching assistant for SE 168/268, Structural System Testing and Model Correlation (Spring 2022 and 2023), a course co-taught by Prof. Michael Todd and engineers from ATA Engineering. Over ten weeks, students take a plate from a finite-element model to a modal test, signal processing, test–model correlation, and model updating.\nI led lab instruction in instrumentation, hammer and shaker testing, data acquisition, and data quality, and guided students through modal identification and correlation. In the final project, students locate a hidden spring and estimate its stiffness from new measurements.\n\nStructural Vibration Testing and Model Correlation →\n\nI also supported SE 130A/B, Structural Analysis I and II (Summer 2021)."
+  },
+  {
+    "objectID": "experience.html#mentoring",
+    "href": "experience.html#mentoring",
+    "title": "Experience",
+    "section": "Mentoring",
+    "text": "Mentoring\n\nHaiwei Lin, Ph.D. researcher: corrosion-to-cracking modeling, through a collaboration I initiated with Prof. Shabnam Semnani.\nVaibhav Pratap, M.S. independent study: reliability analysis and uncertainty quantification.\nEdward Yu and Peter Le, NSF REU undergraduates: cantilever-plate testing, finite-element correlation, and boundary-stiffness updating."
+  },
+  {
+    "objectID": "experience.html#research-program",
+    "href": "experience.html#research-program",
+    "title": "Experience",
+    "section": "Research Program",
+    "text": "Research Program\nInnovative Technologies in Structural Health Monitoring for Condition Assessment and Reliability Prediction (W9132T-22-20014). I developed technical content for five proposal topics and presented research progress at semiannual reviews."
+  },
+  {
+    "objectID": "experience.html#service-and-affiliations",
+    "href": "experience.html#service-and-affiliations",
+    "title": "Experience",
+    "section": "Service and Affiliations",
+    "text": "Service and Affiliations\nReviewer for ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part B, Journal of Computational Physics, Journal of Verification, Validation and Uncertainty Quantification, and Journal of Structural Design and Construction Practice.\nMember of the Society for Experimental Mechanics and the Earthquake Engineering Research Institute.\nDownload Full CV ↓"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "My publications cover structural health monitoring, multiscale corrosion simulation, machine learning, and probabilistic assessment. Four papers that tell the core story of my research come first, followed by the complete list. You can also find my work on Google Scholar ↗."
+  },
+  {
+    "objectID": "publications.html#selected-publications",
+    "href": "publications.html#selected-publications",
+    "title": "Publications",
+    "section": "Selected Publications",
+    "text": "Selected Publications\nScientific Reports · 2022The Physics of a Growing PitA stress-aware model of corrosion and crack initiation.MSSP · 2023A Risk Map of a Whole GateAdaptive surrogates make structural reliability practical.JRUE-B · 2025Model Updating in SecondsFast Bayesian inference with conditional invertible networks.JCSHM · AcceptedChecked Against ExperimentsBlind predictions of corrosion severity on real specimens.\n\nJournal Articles\nMachine Learning-Enabled Probabilistic Hybrid Model Updating of Pitting Corrosion with Application to Hydraulic Steel Structures: An Experimental ValidationGuofeng Qian, Duncan Jay Fure, Long Wang, Zhen Hu, and Michael D. Todd.Journal of Civil Structural Health Monitoring · AcceptedAcceptedCode ↗Related Case Study →\nEnhancing Bayesian Inference-Based Damage Diagnostics Through Domain Translation with Application to Miter GatesYichao Zeng, Zhao Zhao, Guofeng Qian, Michael D. Todd, and Zhen Hu.Journal of Mechanical Design, 147(6), 061701 · 2025DOI ↗Related Case Study →\nBayesian Model Updating of Multiscale Simulations Informing Corrosion Prognostics Using Conditional Invertible Neural NetworksGuofeng Qian, Jice Zeng, Zhen Hu, and Michael D. Todd.ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part B: Mechanical Engineering, 11(1), 011105 · 2025DOI ↗Related Case Study →\nPitting Corrosion Diagnostics and Prognostics for Miter Gates Using Multiscale Simulation and Image Inspection DataGuofeng Qian, Zihan Wu, Zhen Hu, and Michael D. Todd.Structural Health Monitoring · 2024DOI ↗Related Case Study →\nPhysics-Based Corrosion Reliability Analysis of Miter Gates Using Multi-Scale Simulations and Adaptive Surrogate ModelingGuofeng Qian, Zhen Hu, and Michael D. Todd.Mechanical Systems and Signal Processing, 200, 110619 · 2023DOI ↗Related Case Study →\nCorrosion Morphology Prediction of Civil Infrastructure Using a Physics-Constrained Machine Learning MethodDavid Najera-Flores, Guofeng Qian, Zhen Hu, and Michael D. Todd.Mechanical Systems and Signal Processing, 200, 110515 · 2023DOI ↗Related Case Study →\nMachine Learning-Enabled Calibration of River Routing Model ParametersYing Zhao, Mayank Chadha, Nicholas Olsen, Elissa Yeates, Josh Turner, Guga Gugaratshan, Guofeng Qian, Michael D. Todd, and Zhen Hu.Journal of Hydroinformatics, 25(5), 1799–1821 · 2023DOI ↗Related Work →\nA Probabilistic Computational Framework for the Prediction of Corrosion-Induced Cracking in Large StructuresGuofeng Qian, Karnpiwat Tantratian, Lei Chen, Zhen Hu, and Michael D. Todd.Scientific Reports, 12, 20898 · 2022DOI ↗Related Case Study →\n\nBook Chapter\nThe Use of Digital Twin Architectures in Structural Health Monitoring and Management of the Inland Waterways Navigation Civil InfrastructureGuofeng Qian, Mayank Chadha, Zihan Wu, Zhen Hu, and Michael D. Todd.In Condition Monitoring and Structural Health Monitoring of Infrastructure Systems, edited by Vistasp M. Karbhari and Farhad Ansari. Woodhead Publishing, pp. 675–718 · 2026DOI ↗Related Case Study →\n\nConference Contributions\n2026\nCase Study on Temperature Effects on Bridge FrequenciesGuofeng Qian, Jan-Hauke Bartels, Christoph Tomann, and Nico Dieckmann.12th European Workshop on Structural Health Monitoring (EWSHM), Toulouse, France · 2026Related Case Study →\nValue of Information for Structural Health Monitoring of a Prestressed Concrete Bridge with Stress-Corrosion-Cracking RiskJan-Hauke Bartels, Guofeng Qian, and Lasse Petersen.13th International Conference on Structural Dynamics (EURODYN), Hannover, Germany · 2026Related Work →\n2025\nGeneralized Damage Diagnostics of Two Miter Gates Through Domain AdaptationGuofeng Qian, Haiwei Lin, Travis Fillmore, Hai Nguyen, Brian Eick, Zhen Hu, and Michael D. Todd.15th International Workshop on Structural Health Monitoring (IWSHM), Stanford, California · 2025DOI ↗Related Case Study →\nPitting Corrosion Model Updating Using Experimental DataGuofeng Qian, Duncan Jay Fure, Long Wang, Zhen Hu, and Michael D. Todd.IWSHM, Stanford, California · 2025Related Case Study →\nUnsupervised Damage Diagnostics with Data Normalization Using Experimental DataGuofeng Qian, Jan-Hauke Bartels, and Michael D. Todd.IWSHM, Stanford, California · 2025Related Work →\nMatched Filtering-Based Sensor Fault Classification for Structural Health Monitoring SystemsJan-Hauke Bartels, Guofeng Qian, and Michael D. Todd.IWSHM, Stanford, California · 2025Related Work →\nA Privacy-Preserving Framework Using Federated Learning for Structural Health Monitoring with Miter Gates ApplicationYichao Yang, Haiwei Lin, Guofeng Qian, Zhen Hu, and Michael D. Todd.IWSHM, Stanford, California · 2025DOI ↗Best Paper · IWSHM 2025Related Case Study →\nLikelihood-Free Bayesian Inference for Localized Corrosion in Miter GatesGuofeng Qian, Jice Zeng, Zhen Hu, and Michael D. Todd.Model Validation and Uncertainty Quantification, SEM Conference Proceedings, Springer · 2025Related Case Study →\nMulti-Scale Multi-Mode Damage Simulation for Miter GatesGuofeng Qian, Haiwei Lin, Zhen Hu, and Michael D. Todd.Model Validation and Uncertainty Quantification, SEM Conference Proceedings, Springer · 2025Related Case Study →\n2024\nPitting Corrosion Monitoring Framework for Miter Gates with Digital TwinGuofeng Qian, Zhen Hu, and Michael D. Todd.11th European Workshop on Structural Health Monitoring (EWSHM), Potsdam, Germany · 2024DOI ↗Related Case Study →\nMultiscale Corrosion Damage Diagnostics and Prognostics for a Miter GateGuofeng Qian, Zihan Wu, Zhen Hu, and Michael D. Todd.Model Validation and Uncertainty Quantification, SEM Conference Proceedings, Springer · 2024Related Case Study →\nDamage Diagnostics of Miter Gates Using Domain Adaptation and Normalizing Flow-Based Likelihood-Free InferenceYichao Zeng, Zhao Zhao, Guofeng Qian, Michael D. Todd, and Zhen Hu.Annual Conference of the PHM Society, 16(1) · 2024DOI ↗Related Case Study →\n2023\nA Hybrid Surrogate Modeling Method for Corrosion Morphology Prediction Under Non-Stationary Dynamic LoadingGuofeng Qian, David Najera-Flores, Zhen Hu, and Michael D. Todd.14th International Workshop on Structural Health Monitoring (IWSHM), Stanford, California, pp. 643–650 · 2023DOI ↗Related Case Study →\nPhysics-Based Corrosion Reliability Analysis of Miter Gates Using Multiscale Simulations and Adaptive Surrogate ModelingGuofeng Qian, Zhen Hu, and Michael D. Todd.Model Validation and Uncertainty Quantification, Volume 3, SEM Conference Proceedings, Springer, pp. 101–105 · 2023DOI ↗Related Case Study →"
   },
   {
     "objectID": "work/bridge-oma-temperature.html",
@@ -161,227 +343,108 @@
     "text": "Publication\n\nG. Qian, J.-H. Bartels, C. Tomann, and N. Dieckmann. Case Study on Temperature Effects on Bridge Frequencies. EWSHM 2026, Toulouse, France. Full Citation"
   },
   {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
+    "objectID": "work/corrosion-reliability.html",
+    "href": "work/corrosion-reliability.html",
+    "title": "Uncertainty Propagation and Reliability Analysis",
     "section": "",
-    "text": "My publications cover structural health monitoring, multiscale corrosion simulation, machine learning, and probabilistic assessment. Four papers that tell the core story of my research come first, followed by the complete list. You can also find my work on Google Scholar ↗."
+    "text": "Doctoral Research · UC San Diego · 2022–2023 · USACE/ERDC"
   },
   {
-    "objectID": "publications.html#selected-publications",
-    "href": "publications.html#selected-publications",
-    "title": "Publications",
-    "section": "Selected Publications",
-    "text": "Selected Publications\nScientific Reports · 2022The Physics of a Growing PitA stress-aware model of corrosion and crack initiation.MSSP · 2023A Risk Map of a Whole GateAdaptive surrogates make structural reliability practical.JRUE-B · 2025Model Updating in SecondsFast Bayesian inference with conditional invertible networks.JCSHM · AcceptedChecked Against ExperimentsBlind predictions of corrosion severity on real specimens.\n\nJournal Articles\nMachine Learning-Enabled Probabilistic Hybrid Model Updating of Pitting Corrosion with Application to Hydraulic Steel Structures: An Experimental ValidationGuofeng Qian, Duncan Jay Fure, Long Wang, Zhen Hu, and Michael D. Todd.Journal of Civil Structural Health Monitoring · AcceptedAcceptedCode ↗Related Case Study →\nEnhancing Bayesian Inference-Based Damage Diagnostics Through Domain Translation with Application to Miter GatesYichao Zeng, Zhao Zhao, Guofeng Qian, Michael D. Todd, and Zhen Hu.Journal of Mechanical Design, 147(6), 061701 · 2025DOI ↗Related Case Study →\nBayesian Model Updating of Multiscale Simulations Informing Corrosion Prognostics Using Conditional Invertible Neural NetworksGuofeng Qian, Jice Zeng, Zhen Hu, and Michael D. Todd.ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part B: Mechanical Engineering, 11(1), 011105 · 2025DOI ↗Related Case Study →\nPitting Corrosion Diagnostics and Prognostics for Miter Gates Using Multiscale Simulation and Image Inspection DataGuofeng Qian, Zihan Wu, Zhen Hu, and Michael D. Todd.Structural Health Monitoring · 2024DOI ↗Related Case Study →\nPhysics-Based Corrosion Reliability Analysis of Miter Gates Using Multi-Scale Simulations and Adaptive Surrogate ModelingGuofeng Qian, Zhen Hu, and Michael D. Todd.Mechanical Systems and Signal Processing, 200, 110619 · 2023DOI ↗Related Case Study →\nCorrosion Morphology Prediction of Civil Infrastructure Using a Physics-Constrained Machine Learning MethodDavid Najera-Flores, Guofeng Qian, Zhen Hu, and Michael D. Todd.Mechanical Systems and Signal Processing, 200, 110515 · 2023DOI ↗Related Case Study →\nMachine Learning-Enabled Calibration of River Routing Model ParametersYing Zhao, Mayank Chadha, Nicholas Olsen, Elissa Yeates, Josh Turner, Guga Gugaratshan, Guofeng Qian, Michael D. Todd, and Zhen Hu.Journal of Hydroinformatics, 25(5), 1799–1821 · 2023DOI ↗Related Work →\nA Probabilistic Computational Framework for the Prediction of Corrosion-Induced Cracking in Large StructuresGuofeng Qian, Karnpiwat Tantratian, Lei Chen, Zhen Hu, and Michael D. Todd.Scientific Reports, 12, 20898 · 2022DOI ↗Related Case Study →\n\nBook Chapter\nThe Use of Digital Twin Architectures in Structural Health Monitoring and Management of the Inland Waterways Navigation Civil InfrastructureGuofeng Qian, Mayank Chadha, Zihan Wu, Zhen Hu, and Michael D. Todd.In Condition Monitoring and Structural Health Monitoring of Infrastructure Systems, edited by Vistasp M. Karbhari and Farhad Ansari. Woodhead Publishing, pp. 675–718 · 2026DOI ↗Related Case Study →\n\nConference Contributions\n2026\nCase Study on Temperature Effects on Bridge FrequenciesGuofeng Qian, Jan-Hauke Bartels, Christoph Tomann, and Nico Dieckmann.12th European Workshop on Structural Health Monitoring (EWSHM), Toulouse, France · 2026Related Case Study →\nValue of Information for Structural Health Monitoring of a Prestressed Concrete Bridge with Stress-Corrosion-Cracking RiskJan-Hauke Bartels, Guofeng Qian, and Lasse Petersen.13th International Conference on Structural Dynamics (EURODYN), Hannover, Germany · 2026Related Work →\n2025\nGeneralized Damage Diagnostics of Two Miter Gates Through Domain AdaptationGuofeng Qian, Haiwei Lin, Travis Fillmore, Hai Nguyen, Brian Eick, Zhen Hu, and Michael D. Todd.15th International Workshop on Structural Health Monitoring (IWSHM), Stanford, California · 2025DOI ↗Related Case Study →\nPitting Corrosion Model Updating Using Experimental DataGuofeng Qian, Duncan Jay Fure, Long Wang, Zhen Hu, and Michael D. Todd.IWSHM, Stanford, California · 2025Related Case Study →\nUnsupervised Damage Diagnostics with Data Normalization Using Experimental DataGuofeng Qian, Jan-Hauke Bartels, and Michael D. Todd.IWSHM, Stanford, California · 2025Related Work →\nMatched Filtering-Based Sensor Fault Classification for Structural Health Monitoring SystemsJan-Hauke Bartels, Guofeng Qian, and Michael D. Todd.IWSHM, Stanford, California · 2025Related Work →\nA Privacy-Preserving Framework Using Federated Learning for Structural Health Monitoring with Miter Gates ApplicationYichao Yang, Haiwei Lin, Guofeng Qian, Zhen Hu, and Michael D. Todd.IWSHM, Stanford, California · 2025DOI ↗Best Paper · IWSHM 2025Related Case Study →\nLikelihood-Free Bayesian Inference for Localized Corrosion in Miter GatesGuofeng Qian, Jice Zeng, Zhen Hu, and Michael D. Todd.Model Validation and Uncertainty Quantification, SEM Conference Proceedings, Springer · 2025Related Case Study →\nMulti-Scale Multi-Mode Damage Simulation for Miter GatesGuofeng Qian, Haiwei Lin, Zhen Hu, and Michael D. Todd.Model Validation and Uncertainty Quantification, SEM Conference Proceedings, Springer · 2025Related Case Study →\n2024\nPitting Corrosion Monitoring Framework for Miter Gates with Digital TwinGuofeng Qian, Zhen Hu, and Michael D. Todd.11th European Workshop on Structural Health Monitoring (EWSHM), Potsdam, Germany · 2024DOI ↗Related Case Study →\nMultiscale Corrosion Damage Diagnostics and Prognostics for a Miter GateGuofeng Qian, Zihan Wu, Zhen Hu, and Michael D. Todd.Model Validation and Uncertainty Quantification, SEM Conference Proceedings, Springer · 2024Related Case Study →\nDamage Diagnostics of Miter Gates Using Domain Adaptation and Normalizing Flow-Based Likelihood-Free InferenceYichao Zeng, Zhao Zhao, Guofeng Qian, Michael D. Todd, and Zhen Hu.Annual Conference of the PHM Society, 16(1) · 2024DOI ↗Related Case Study →\n2023\nA Hybrid Surrogate Modeling Method for Corrosion Morphology Prediction Under Non-Stationary Dynamic LoadingGuofeng Qian, David Najera-Flores, Zhen Hu, and Michael D. Todd.14th International Workshop on Structural Health Monitoring (IWSHM), Stanford, California, pp. 643–650 · 2023DOI ↗Related Case Study →\nPhysics-Based Corrosion Reliability Analysis of Miter Gates Using Multiscale Simulations and Adaptive Surrogate ModelingGuofeng Qian, Zhen Hu, and Michael D. Todd.Model Validation and Uncertainty Quantification, Volume 3, SEM Conference Proceedings, Springer, pp. 101–105 · 2023DOI ↗Related Case Study →"
+    "objectID": "work/corrosion-reliability.html#where-the-uncertainty-comes-from",
+    "href": "work/corrosion-reliability.html#where-the-uncertainty-comes-from",
+    "title": "Uncertainty Propagation and Reliability Analysis",
+    "section": "Where the Uncertainty Comes From",
+    "text": "Where the Uncertainty Comes From\nNothing about a gate in service is fixed. Water levels change with every lock operation, a gap can open where the gate should bear against the wall, and the water’s chemistry and temperature change how fast steel corrodes. I gave each of these a probability distribution.\n\n\nSources of uncertainty in the reliability analysis, after MSSP 2023\n\n\nVariable\nWhat Drives It\nModel\n\n\n\n\nUpstream water level\nWaterway elevation management\nGaussian\n\n\nDownstream water level\nLock operation\nWeibull\n\n\nGap length at the quoin block\nLoss of contact between gate and wall\nRandom variable\n\n\nReaction constant\nWater chemistry and temperature\nGaussian\n\n\nDiffusion coefficient\nWater chemistry and temperature\nGaussian\n\n\n\n\nTo characterize changing loads in the broader simulation study, I used USGS water levels recorded every 15 minutes at Greenup Dam. I separated the record into a trend and random fluctuations, then used a Karhunen–Loève expansion to generate water-level histories. The reliability analysis used the distributions summarized above.\n\n\n\n\nThe measured record is split into trend and noise, and new water-level histories are generated with the same statistics. Source: doctoral defense presentation; data from the USGS gauge at Greenup Dam."
   },
   {
-    "objectID": "experience.html",
-    "href": "experience.html",
-    "title": "Experience",
-    "section": "",
-    "text": "My experience moves from the lab to the field: doctoral and postdoctoral research at UC San Diego, then engineering practice in Germany. Along the way, teaching and mentoring became an important part of the work. The most recent role comes first."
+    "objectID": "work/corrosion-reliability.html#from-an-uncertain-pit-to-a-distribution-of-crack-times",
+    "href": "work/corrosion-reliability.html#from-an-uncertain-pit-to-a-distribution-of-crack-times",
+    "title": "Uncertainty Propagation and Reliability Analysis",
+    "section": "From an Uncertain Pit to a Distribution of Crack Times",
+    "text": "From an Uncertain Pit to a Distribution of Crack Times\nThe surrogate from the first project carries its own uncertainty. Because it runs in seconds, I could propagate that uncertainty by Monte Carlo simulation: thousands of possible pit histories, each checked against the crack-initiation criterion. The result is not one crack-initiation time but a distribution, together with where on the pit the crack is likely to start.\n\n\n\n\nDistributions of crack-initiation time and location for two loading cases, compared with the full simulation (red). Source: doctoral defense presentation; Scientific Reports 2022."
   },
   {
-    "objectID": "experience.html#rd-engineer",
-    "href": "experience.html#rd-engineer",
-    "title": "Experience",
-    "section": "R&D Engineer",
-    "text": "R&D Engineer\n\nLPI Ingenieurgesellschaft mbH\n\nAt LPI, I brought my research background to bridges in service, working on structural monitoring and condition assessment.\n\nAutomated operational modal analysis of long-term monitoring data, with bootstrap uncertainty bounds.\nStudied how temperature shifts the natural frequencies of two twin bridges, one with documented tendon damage.\nInterpreted strain, displacement, inclination, acoustic-emission, and fiber-optic measurements for bridge owners, and automated parametric SOFiSTiK models with Python.\n\n\nOperational Modal Analysis and Temperature Effects →"
+    "objectID": "work/corrosion-reliability.html#two-scales-two-surrogates",
+    "href": "work/corrosion-reliability.html#two-scales-two-surrogates",
+    "title": "Uncertainty Propagation and Reliability Analysis",
+    "section": "Two Scales, Two Surrogates",
+    "text": "Two Scales, Two Surrogates\nNext came the whole gate. A validated, 64,919-element Abaqus model of the Greenup miter gate turns water levels and gap length into local stresses. I ran it 1,000 times and trained a global surrogate on the results; nine features captured 95% of the variation in the gate’s strain response.\nA second, local surrogate turns those stresses, together with the uncertain corrosion parameters, into the probability that a crack starts within two years.\n\n\n\n\nWater levels and gap length drive the gate model; its stresses and the environment drive the pit model. Source: MSSP 2023."
   },
   {
-    "objectID": "experience.html#postdoctoral-researcher",
-    "href": "experience.html#postdoctoral-researcher",
-    "title": "Experience",
-    "section": "Postdoctoral Researcher",
-    "text": "Postdoctoral Researcher\n\nUniversity of California San Diego\n\nAfter my Ph.D., I extended the USACE/ERDC-supported research program from single structures to populations of similar structures, and tested the corrosion model against experiments.\n\nDeveloped generalized damage diagnosis that uses labeled data from one structure to diagnose a similar, unlabeled structure.\nValidated Bayesian updating of the corrosion model against laboratory corrosion experiments.\nContributed to proposals and semiannual sponsor reviews, and mentored graduate and undergraduate researchers.\n\n\nGeneralized Damage Diagnosis → · Bayesian Model Updating →"
+    "objectID": "work/corrosion-reliability.html#spending-simulations-where-they-matter",
+    "href": "work/corrosion-reliability.html#spending-simulations-where-they-matter",
+    "title": "Uncertainty Propagation and Reliability Analysis",
+    "section": "Spending Simulations Where They Matter",
+    "text": "Spending Simulations Where They Matter\nFor this reliability calculation, accurate predictions near the boundary between “safe” and “cracked” matter most. I combined importance sampling, Gaussian mixture models, and active learning to add training runs near that boundary, with a stopping rule based on a conservative bound on the probability error.\nAcross eleven stress conditions, the local benchmark required 101 function evaluations, compared with 674 for adaptive Kriging Monte Carlo simulation (AK-MCS). The benchmark used a Gaussian-process approximation of the phase-field model as its reference model.\n\n\n\n\nFunction evaluations in the local reliability benchmark, grouped by stress condition. Totals: 101 for the proposed method and 674 for AK-MCS. Redrawn from MSSP 2023, Table 2."
   },
   {
-    "objectID": "experience.html#graduate-student-researcher",
-    "href": "experience.html#graduate-student-researcher",
-    "title": "Experience",
-    "section": "Graduate Student Researcher",
-    "text": "Graduate Student Researcher\n\nUniversity of California San Diego\n\nMy doctoral research asked how to diagnose and predict pitting corrosion in large civil infrastructure.\n\nBuilt a multiphysics phase-field corrosion model and machine-learning surrogates that run it in seconds.\nPropagated uncertainty from loads, chemistry, and models to a reliability analysis of an entire gate.\nDeveloped Bayesian model updating from inspection images.\n\n\nCorrosion Simulation → · Uncertainty and Reliability → · Bayesian Model Updating →"
+    "objectID": "work/corrosion-reliability.html#why-risk-concentrates-low-on-the-gate",
+    "href": "work/corrosion-reliability.html#why-risk-concentrates-low-on-the-gate",
+    "title": "Uncertainty Propagation and Reliability Analysis",
+    "section": "Why Risk Concentrates Low on the Gate",
+    "text": "Why Risk Concentrates Low on the Gate\nPutting the pieces together gives the map at the top of this page. Risk concentrates near the bottom and below the waterline for two reasons: stresses are highest at the bottom, and steel corrodes faster in water than in air. A similar pattern appears on retired gates."
   },
   {
-    "objectID": "experience.html#research-assistant",
-    "href": "experience.html#research-assistant",
-    "title": "Experience",
-    "section": "Research Assistant",
-    "text": "Research Assistant\n\nUniversity of California San Diego\n\nMy first research project: Abaqus models of debonding in composite aircraft wing spars, and a deep-learning surrogate for strain response across damage locations and sizes."
-  },
-  {
-    "objectID": "experience.html#teaching",
-    "href": "experience.html#teaching",
-    "title": "Experience",
-    "section": "Teaching",
-    "text": "Teaching\nTeaching assistant for SE 168/268, Structural System Testing and Model Correlation (Spring 2022 and 2023), a course co-taught by Prof. Michael Todd and engineers from ATA Engineering. Over ten weeks, students take a plate from a finite-element model to a modal test, signal processing, test–model correlation, and model updating.\nI led lab instruction in instrumentation, hammer and shaker testing, data acquisition, and data quality, and guided students through modal identification and correlation. In the final project, students locate a hidden spring and estimate its stiffness from new measurements.\nI also supported SE 130A/B, Structural Analysis I and II (Summer 2021)."
-  },
-  {
-    "objectID": "experience.html#mentoring",
-    "href": "experience.html#mentoring",
-    "title": "Experience",
-    "section": "Mentoring",
-    "text": "Mentoring\n\nHaiwei Lin, Ph.D. researcher: corrosion-to-cracking modeling, through a collaboration I initiated with Prof. Shabnam Semnani.\nVaibhav Pratap, M.S. independent study: reliability analysis and uncertainty quantification.\nEdward Yu and Peter Le, NSF REU undergraduates: cantilever-plate testing, finite-element correlation, and boundary-stiffness updating."
-  },
-  {
-    "objectID": "experience.html#research-program",
-    "href": "experience.html#research-program",
-    "title": "Experience",
-    "section": "Research Program",
-    "text": "Research Program\nInnovative Technologies in Structural Health Monitoring for Condition Assessment and Reliability Prediction (W9132T-22-20014). I developed technical content for five proposal topics and presented research progress at semiannual reviews."
-  },
-  {
-    "objectID": "experience.html#service-and-affiliations",
-    "href": "experience.html#service-and-affiliations",
-    "title": "Experience",
-    "section": "Service and Affiliations",
-    "text": "Service and Affiliations\nReviewer for ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part B, Journal of Computational Physics, Journal of Verification, Validation and Uncertainty Quantification, and Journal of Structural Design and Construction Practice.\nMember of the Society for Experimental Mechanics and the Earthquake Engineering Research Institute.\nDownload Full CV ↓"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
-    "section": "",
-    "text": "Structural Engineer · Researcher · Vancouver, BC\nThat curiosity has taken me across four countries. I studied civil engineering at Harbin Institute of Technology in China, with an exchange semester at Monash University in Australia. I then moved to UC San Diego, where I earned my M.S. and Ph.D. in structural engineering with Prof. Michael Todd.\nAt UC San Diego, in a research program supported by the U.S. Army Corps of Engineers, I studied pitting corrosion on the steel gates of navigation locks.\nI simulated it with multiphysics models and machine-learning surrogates, carried its uncertainty through to a reliability analysis of a whole gate, and updated the models with laboratory measurements. As a postdoc, I turned to diagnosing damage across many similar structures.\nIn 2025, I joined LPI Ingenieurgesellschaft in Hannover, Germany, to look at the same question from the field: bridges in service. There I automated operational modal analysis of long-term monitoring data, studied how temperature shifts the natural frequencies of an intact and a damaged bridge, and helped interpret field measurements for bridge owners.\nTeaching and mentoring have been a rewarding part of the journey, from running modal-testing labs to guiding students through their first research projects. You can read more on the Experience page, or browse the case studies."
-  },
-  {
-    "objectID": "about.html#education",
-    "href": "about.html#education",
-    "title": "About Me",
-    "section": "Education",
-    "text": "Education\n\nPh.D. in Structural Engineering\nUniversity of California San Diego\n\n2021–2023 · Advisor: Prof. Michael D. Todd\n\nDissertation: Diagnostics and Prognostics of Pitting Corrosion in Large Civil Infrastructure Using Multi-Scale Simulation and Machine Learning.\n\n\nM.S. in Structural Engineering\nUniversity of California San Diego\n\n2019–2020 · Health Monitoring and Nondestructive Evaluation\n\n\n\nB.Eng. in Civil Engineering\nHarbin Institute of Technology\n\n2015–2019 · Exchange Semester at Monash University, January–June 2018"
-  },
-  {
-    "objectID": "about.html#technical-toolkit",
-    "href": "about.html#technical-toolkit",
-    "title": "About Me",
-    "section": "Technical Toolkit",
-    "text": "Technical Toolkit\n\n\n\n\n\n\n\n\nArea\nMethods and Tools\n\n\n\n\nStructural Monitoring\nOperational modal analysis, system identification, signal processing, acoustic emission, distributed fiber-optic sensing\n\n\nSimulation\nFinite-element and multiphysics modeling; Abaqus, COMSOL, FEniCSx, SOFiSTiK\n\n\nMachine Learning\nPyTorch, TensorFlow, autoencoders, Gaussian processes, surrogate models, normalizing flows, domain adaptation\n\n\nProbabilistic Assessment\nBayesian inference, model updating, Monte Carlo methods, uncertainty quantification, reliability analysis\n\n\nScientific Computing\nPython, MATLAB, Git, LaTeX"
-  },
-  {
-    "objectID": "about.html#selected-recognition",
-    "href": "about.html#selected-recognition",
-    "title": "About Me",
-    "section": "Selected Recognition",
-    "text": "Selected Recognition\n\nBest Paper, IWSHM 2025, for a federated-learning monitoring framework (coauthor).\nDistinguished Graduate Thesis, 2019.\nInternational Study Grant, Monash University, 2018.\nBest Paper, International Conference for Integration of Science, Technology and Society, 2016.\n“Xu Zengquan” Scholarship, 2016."
-  },
-  {
-    "objectID": "about.html#contact",
-    "href": "about.html#contact",
-    "title": "About Me",
-    "section": "Get in Touch",
-    "text": "Get in Touch\n\nI’m happy to hear from fellow engineers, researchers, and anyone curious about the work.\ng3qian@gmail.com\nVancouver, British Columbia, Canada\nGoogle Scholar · LinkedIn\nDownload CV ↓"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Hi, I'm Guofeng Qian.",
-    "section": "",
-    "text": "Structural Engineer · Researcher · Vancouver\n    Hi, I'm Guofeng Qian.\n    I study how structures age, and how measurements and models can tell us about it before it becomes a problem.\n    My work combines structural health monitoring, physics-based simulation, and machine learning, from corrosion on U.S. navigation-lock gates to highway bridges in Germany.\n    Ph.D., UC San Diego · Formerly R&D Engineer at LPI, Hannover · Now in Vancouver, BC\n    \n      Explore My Work →\n      More About Me →\n    \n    \n      Email ↗\n      Google Scholar ↗\n      LinkedIn ↗\n      CV ↗\n    \n  \n  \n    \n    Beneath one of two twin highway bridges I monitored in Germany.\n  \n\n\n  \n    Monitoring and ModelingSelected Work\n    Case Studies and Other Work →\n  \n  Five projects, starting with monitoring bridges in service, followed by corrosion modeling, reliability, Bayesian updating, and damage diagnosis.\n\n\n  \n  Engineering Practice · LPI · 2025–2026Operational Modal Analysis and Temperature Effects on Natural FrequenciesAutomated modal identification on twin bridges: the damaged one vibrates lower (3.44 vs 3.52 Hz) and responds differently to temperature.Operational Modal Analysis · Monitoring↗\n\n\n  \n  Doctoral Research · UC San Diego · 2021–2023Multiphysics Corrosion Simulation and Surrogate ModelingStress-aware simulations of how pits grow into cracks, and surrogates that forecast 200 time steps in 1.3–5.4 seconds after training.Phase-Field Modeling · Machine Learning↗\n\n\n  \n  Doctoral Research · UC San Diego · 2022–2023Uncertainty Propagation and Reliability AnalysisA gate-wide crack-initiation risk map, with 6.7× fewer evaluations in the local reliability benchmark.Reliability · Adaptive Surrogates↗\n\n\n  \n  Doctoral and Postdoctoral Research · UC San Diego with Cal Poly · 2022–2025Bayesian Model Updating with Real MeasurementsFour-second model updates, and a laboratory forecast of the 95th-percentile pit-opening radius with 11% error, versus 51% for a power law.Bayesian Inference · Experiments↗\n\n\n  \n  Postdoctoral Research · UC San Diego · 2024–2025Generalized Damage Diagnosis Across Similar StructuresOn simulated gate responses, transferring knowledge from The Dalles cut gap-prediction error on Bonneville by 78%.Domain Adaptation · Population-Based SHM↗\n\n\n\n\n  What I DoThree Questions Behind My Work\n  Across these projects, in research and in practice, the work comes back to the same three questions.\n  \n    01 · MonitorHow Is the Structure Behaving?Reading a structure's response through vibration, strain, acoustic emission, and fiber-optic sensing, and separating real change from the effects of temperature and traffic.\n    02 · ModelWhat Is Happening Inside?Building finite-element and multiphysics models of damage we cannot see directly, then using machine learning so they run fast enough to explore uncertainty.\n    03 · DecideWhat Should We Do Next?Combining models and measurements through Bayesian updating and reliability analysis, so that inspection and maintenance choices rest on evidence.\n  \n\n\n  NewsRecentlyAll Publications →\n  \n    2026Presented Our Study of Temperature Effects on Bridge FrequenciesLead Author · EWSHM 2026, Toulouse\n    2026When Does Structural Monitoring Pay Off?Coauthor · EURODYN 2026, Hannover\n    2026Testing a Corrosion Model Against Laboratory ExperimentsAccepted · Journal of Civil Structural Health Monitoring\n    2026Digital-Twin Architectures for Inland Waterway InfrastructureBook Chapter · Woodhead Publishing\n    2025Best Paper Award for a Federated-Learning Monitoring FrameworkCoauthor · IWSHM 2025, Stanford\n  \n\n\n  Say HelloI'm always glad to talk about structural monitoring, digital twins, or an interesting engineering problem.\n  Get in Touch ↗"
-  },
-  {
-    "objectID": "work.html",
-    "href": "work.html",
-    "title": "Work",
-    "section": "",
-    "text": "Each case study starts with a question about a real structure and follows the work from idea to evidence. Bridge monitoring at LPI in Germany comes first.\nThe next three follow one line of research on corrosion in steel lock gates: simulating it, quantifying its risk, and updating the model with measurements. The final case study explores damage diagnosis across similar structures."
-  },
-  {
-    "objectID": "work.html#other-work",
-    "href": "work.html#other-work",
-    "title": "Work",
-    "section": "Other Work",
-    "text": "Other Work\nSmaller projects and collaborations that do not have a full case study.\n\nComposite Wing-Spar Debonding · UC San Diego, 2020\n\nMy first research project: Abaqus models of debonding in composite wing spars, and a deep-learning surrogate that predicts strain response across different debonding locations and sizes. Research assistant.\n\nValue of Information for Structural Monitoring · EURODYN 2026\n\nWhen does monitoring a prestressed bridge with stress-corrosion-cracking risk pay off? Coauthor. Publication\n\nSensor-Fault Classification · IWSHM 2025\n\nMatched-filtering methods to classify faults in structural-monitoring sensor networks. Coauthor. Publication\n\nDamage Detection Under Changing Temperature · IWSHM 2025\n\nOn a steel lattice mast near Hannover, adversarial data normalization kept a damage classifier working at temperatures it was not trained on, raising accuracy from 61% to 83% without new labels. Lead author, with J.-H. Bartels; data from Leibniz University Hannover. Publication\n\nRiver-Routing Calibration · Journal of Hydroinformatics, 2023\n\nMachine-learning-enabled calibration of river-routing model parameters. Coauthor. Publication"
-  },
-  {
-    "objectID": "work/corrosion-model-updating.html",
-    "href": "work/corrosion-model-updating.html",
-    "title": "Bayesian Model Updating with Real Measurements",
-    "section": "",
-    "text": "Doctoral and Postdoctoral Research · UC San Diego with Cal Poly · 2022–2025"
-  },
-  {
-    "objectID": "work/corrosion-model-updating.html#updating-from-synthetic-corrosion-images",
-    "href": "work/corrosion-model-updating.html#updating-from-synthetic-corrosion-images",
-    "title": "Bayesian Model Updating with Real Measurements",
-    "section": "Updating from Synthetic Corrosion Images",
-    "text": "Updating from Synthetic Corrosion Images\nI first developed and tested the image-based methods using synthetic inspection images rendered in Blender from simulated corrosion. Their known model parameters provided a reference for checking the inference. The observations used for updating were the pit counts and opening sizes extracted from those images.\nA U-Net finds the pits, and super-resolution and circle detection measure their openings. A two-stage method called approximate Bayesian computation (ABC) updates the model: pit counts inform how pits start, and opening widths inform how fast they grow. Once updated, the physics predicts pit depth, which the camera cannot see.\n\n\n\n\nA U-Net segments pits in a Blender-rendered inspection image; thresholding then defines their openings. Source: doctoral defense presentation, slide 74."
-  },
-  {
-    "objectID": "work/corrosion-model-updating.html#faster-inference-for-the-image-study",
-    "href": "work/corrosion-model-updating.html#faster-inference-for-the-image-study",
-    "title": "Bayesian Model Updating with Real Measurements",
-    "section": "Faster Inference for the Image Study",
-    "text": "Faster Inference for the Image Study\nABC found parameters by rerunning the model again and again, which took hours. I replaced that search with two trained networks: a summary network that condenses the observations, and a conditional invertible neural network that turns them directly into plausible parameter values.\nIn this synthetic-image benchmark, about five hours of training reduced each update from four hours to four seconds. Posterior standard deviations were roughly four to seven times smaller than with ABC. That speed makes repeated updating practical."
-  },
-  {
-    "objectID": "work/corrosion-model-updating.html#updating-from-real-laser-scans",
-    "href": "work/corrosion-model-updating.html#updating-from-real-laser-scans",
-    "title": "Bayesian Model Updating with Real Measurements",
-    "section": "Updating from Real Laser Scans",
-    "text": "Updating from Real Laser Scans\nI then worked with Duncan Fure and Long Wang at Cal Poly on real corrosion measurements. Stainless-steel specimens were corroded in ferric chloride at 50 °C for 15 minutes to 3 hours, then laser-scanned at 4 µm spacing in the surface plane. I extracted pit-opening radius distributions from these scans for model updating.\n\n\n\nReal laser-scan depth maps at 0.25, 0.5, 1, 2, and 3 hours of exposure (a–e), with one pit enlarged (f). Color gives depth below the surface in millimeters. Source: IWSHM 2025 model-updating presentation, slide 9.\n\n\nI updated a hybrid model of phase-field pit growth and probabilistic pit initiation using the first four exposure times. A summary network and conditional invertible neural network inferred parameter distributions from the measured pit-size distributions. The three-hour scans were reserved for checking the forecast.\n\n\n\n\nInference workflow for the real laser-scan study: the summary network condenses the observed pit-size distributions, and the inference network estimates model parameters. Green arrows show training; dashed red arrows show inference. Source: IWSHM 2025 model-updating presentation, slide 11."
-  },
-  {
-    "objectID": "work/corrosion-model-updating.html#what-the-measurements-tell-the-model",
-    "href": "work/corrosion-model-updating.html#what-the-measurements-tell-the-model",
-    "title": "Bayesian Model Updating with Real Measurements",
-    "section": "What the Measurements Tell the Model",
-    "text": "What the Measurements Tell the Model\nThe experimental observations concentrated the posterior distributions of the pit-initiation parameters λ and β and the reaction parameter θ₁. The diffusion parameter θ₂ remained broadly distributed, showing that these measurements constrain reaction kinetics more strongly than diffusion under the accelerated-test conditions.\n\n\n\nParameter distributions updated from the real laser-scan observations: priors in green, posteriors in red, and posterior means in black. Initiation and reaction parameters concentrate, while the diffusion parameter remains broad. Source: IWSHM 2025 model-updating presentation, slide 13; JCSHM manuscript, Fig. 10."
-  },
-  {
-    "objectID": "work/corrosion-model-updating.html#forecasting-the-pit-size-distribution",
-    "href": "work/corrosion-model-updating.html#forecasting-the-pit-size-distribution",
-    "title": "Bayesian Model Updating with Real Measurements",
-    "section": "Forecasting the Pit-Size Distribution",
-    "text": "Forecasting the Pit-Size Distribution\nI propagated these posterior parameter distributions through the model to forecast pit sizes at the held-out three-hour time point. The updated model predicted a 95th-percentile radius of 0.169 mm, against 0.190 mm measured and 0.286 mm from the power law: errors of −11% and +51%, respectively.\nThe mean pit count was also close: 760 predicted, against 804 observed.\n\n\n\nPit-opening radius percentiles over time. At the held-out three-hour point, model updating is closer to the measurements for the 50th, 75th, and 95th percentiles. Source: IWSHM 2025 model-updating presentation, slide 15; JCSHM manuscript, Table 2."
-  },
-  {
-    "objectID": "work/corrosion-model-updating.html#what-it-means",
-    "href": "work/corrosion-model-updating.html#what-it-means",
-    "title": "Bayesian Model Updating with Real Measurements",
+    "objectID": "work/corrosion-reliability.html#what-it-means",
+    "href": "work/corrosion-reliability.html#what-it-means",
+    "title": "Uncertainty Propagation and Reliability Analysis",
     "section": "What It Means",
-    "text": "What It Means\nThe synthetic-image study established the observation-to-parameter workflow and made inference fast. The laser-scan study carried that workflow into real experiments, from measured pit sizes to posterior parameters and a later-time forecast. Together, they show how repeated observations can refine corrosion predictions.\nView the Model-Updating Code on GitHub ↗\nPublications\nMachine Learning-Enabled Probabilistic Hybrid Model Updating of Pitting Corrosion with Application to Hydraulic Steel Structures: An Experimental Validation. Journal of Civil Structural Health Monitoring, accepted.\nBayesian Model Updating of Multiscale Simulations Informing Corrosion Prognostics Using Conditional Invertible Neural Networks. ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part B: Mechanical Engineering, 11(1), 011105, 2025. DOI ↗\nPitting Corrosion Diagnostics and Prognostics for Miter Gates Using Multiscale Simulation and Image Inspection Data. Structural Health Monitoring, 2024. DOI ↗\nPitting Corrosion Model Updating Using Experimental Data. IWSHM, Stanford, California, 2025.\nLikelihood-Free Bayesian Inference for Localized Corrosion in Miter Gates. Model Validation and Uncertainty Quantification, SEM Conference Proceedings, Springer, 2025.\nPitting Corrosion Monitoring Framework for Miter Gates with Digital Twin. 11th European Workshop on Structural Health Monitoring (EWSHM), Potsdam, Germany, 2024. DOI ↗\nMultiscale Corrosion Damage Diagnostics and Prognostics for a Miter Gate. Model Validation and Uncertainty Quantification, SEM Conference Proceedings, Springer, 2024.\n\nPrevious Case Study← Uncertainty and ReliabilityNext Case StudyGeneralized Damage Diagnosis →"
+    "text": "What It Means\nThe analysis turns uncertain loads and corrosion parameters into a spatial forecast that can help prioritize inspections. It also makes the link between assumed conditions and predicted risk explicit. The next step was to update those corrosion parameters with measurements.\nPublications\nPhysics-Based Corrosion Reliability Analysis of Miter Gates Using Multi-Scale Simulations and Adaptive Surrogate Modeling. Mechanical Systems and Signal Processing, 200, 110619, 2023. DOI ↗\nThe Use of Digital Twin Architectures in Structural Health Monitoring and Management of the Inland Waterways Navigation Civil Infrastructure. In Condition Monitoring and Structural Health Monitoring of Infrastructure Systems, edited by Vistasp M. Karbhari and Farhad Ansari. Woodhead Publishing, pp. 675–718, 2026. DOI ↗\nPhysics-Based Corrosion Reliability Analysis of Miter Gates Using Multiscale Simulations and Adaptive Surrogate Modeling. Model Validation and Uncertainty Quantification, Volume 3, SEM Conference Proceedings, Springer, pp. 101–105, 2023. DOI ↗\n\nPrevious Case Study← Corrosion SimulationNext Case StudyBayesian Model Updating →"
   },
   {
-    "objectID": "work/corrosion-simulation.html",
-    "href": "work/corrosion-simulation.html",
-    "title": "Multiphysics Corrosion Simulation and Surrogate Modeling",
+    "objectID": "work/generalized-damage-diagnosis.html",
+    "href": "work/generalized-damage-diagnosis.html",
+    "title": "Generalized Damage Diagnosis Across Similar Structures",
     "section": "",
-    "text": "Doctoral Research · UC San Diego · 2021–2023 · USACE/ERDC"
+    "text": "Postdoctoral Research · UC San Diego · 2024–2025 · USACE/ERDC"
   },
   {
-    "objectID": "work/corrosion-simulation.html#a-corrosion-model-that-feels-stress",
-    "href": "work/corrosion-simulation.html#a-corrosion-model-that-feels-stress",
-    "title": "Multiphysics Corrosion Simulation and Surrogate Modeling",
-    "section": "A Corrosion Model That Feels Stress",
-    "text": "A Corrosion Model That Feels Stress\nMost corrosion models used in practice are empirical curves fitted to past data, which rarely exist for gates like these. I built one on the physics instead.\nThe phase-field model couples four sets of equations: the electrochemical reaction at the metal surface, the transport of dissolved ions, the electric potential, and mechanical equilibrium. Because stress enters the reaction kinetics, the model can tell tension from compression, which many earlier phase-field models did not capture.\nThe results matched physical intuition. Tension makes pits deeper and sharper, compression flattens them, and shear tilts their growth. Cyclic loading also produced crack-like tails in some simulations.\n\n\n\nThe same pit grows differently under tension, no load, and compression, shown with the hydrostatic stress around it. Source: Scientific Reports 2022."
+    "objectID": "work/generalized-damage-diagnosis.html#similar-not-identical",
+    "href": "work/generalized-damage-diagnosis.html#similar-not-identical",
+    "title": "Generalized Damage Diagnosis Across Similar Structures",
+    "section": "Similar, Not Identical",
+    "text": "Similar, Not Identical\nTwo gates of the same type still differ in geometry, boundary conditions, and the water levels they hold back, and a network trained on one can mistake those differences for damage.\nDomain adaptation aims for a diagnosis that is sensitive to damage but not to which structure the data came from. The labeled structure is the source; the structure to diagnose is the target, which contributes unlabeled responses during training."
   },
   {
-    "objectID": "work/corrosion-simulation.html#stress-based-crack-initiation",
-    "href": "work/corrosion-simulation.html#stress-based-crack-initiation",
-    "title": "Multiphysics Corrosion Simulation and Surrogate Modeling",
-    "section": "Stress-Based Crack Initiation",
-    "text": "Stress-Based Crack Initiation\nAs a pit deepens and sharpens, stress concentrates at its tip. I used the pit depth and tip curvature to estimate this concentration, then proposed a crack-initiation criterion based on whether the local stress reaches the von Mises yield limit.\n\n\n\n\nThe same pit is shown as morphology (left) and a stress field (right), with both domains at the same scale. Stress concentrates at the sharpened tip. This local concentration drives the crack-initiation check. Source: doctoral defense presentation, slide 57.\n\n\n\nI compared this stress-based criterion with the Tsujikawa–Kondo criterion, which compares crack and pit growth rates. In the simulated example, the stress-based criterion gives an earlier, more stable initiation prediction: its stress history rises smoothly, while the growth-rate indicator fluctuates.\n\n\n\n\nThe stress-based criterion (red, left axis) reaches its 410 MPa threshold before the growth-rate criterion (blue, right axis) reaches its threshold of Kv = 2. Insets show the pit at the two predicted initiation points. Source: dissertation, Fig. 2.5; doctoral defense, slide 58."
+    "objectID": "work/generalized-damage-diagnosis.html#two-gates-on-the-columbia-river",
+    "href": "work/generalized-damage-diagnosis.html#two-gates-on-the-columbia-river",
+    "title": "Generalized Damage Diagnosis Across Similar Structures",
+    "section": "Two Gates on the Columbia River",
+    "text": "Two Gates on the Columbia River\nI tested the idea on validated finite-element models of two downstream miter gates on the Columbia River. The Dalles was the labeled source, and Bonneville was the unlabeled target.\nOn both, I simulated two common kinds of damage: a gap, where the gate loses contact with the wall at the quoin block, and corrosion, as thickness loss across three zones of the gate. Water levels were sampled within each gate’s measured operating range. A sensitivity analysis then picked the strain-gauge locations that respond most to each type of damage."
   },
   {
-    "objectID": "work/corrosion-simulation.html#a-40-minute-simulation-in-seconds",
-    "href": "work/corrosion-simulation.html#a-40-minute-simulation-in-seconds",
-    "title": "Multiphysics Corrosion Simulation and Surrogate Modeling",
-    "section": "A 40-Minute Simulation in Seconds",
-    "text": "A 40-Minute Simulation in Seconds\nA physics model this detailed is slow: each run took over 40 minutes. Risk analysis needs thousands of runs, so I built a surrogate.\nFrom 255 simulations, a convolutional autoencoder learned to describe each 80 × 40 corrosion image with just six numbers, where principal component analysis would need hundreds.\nI then trained Gaussian-process nonlinear autoregressive models with exogenous inputs (GP-NARX) to forecast those six features. Each prediction uses the previous five time steps together with the applied stress and corrosion parameters. Feeding predictions back into the model gives a longer forecast, with uncertainty, which the decoder turns back into corrosion images.\n\n\n\n\nThe CNN encoder maps a corrosion image into six features. GP-NARX forecasts those features recursively from their recent history and the physical inputs; the decoder reconstructs future pit shapes. Source: dissertation, Fig. 3.1; doctoral defense, slide 35.\n\n\n\n\n\n\n\nEach row shows a later time: the original simulation, the mean forecast and its error, then the decoded Gaussian-process mean and its error. Source: doctoral defense, slide 46; Scientific Reports 2022."
+    "objectID": "work/generalized-damage-diagnosis.html#learning-what-the-gates-have-in-common",
+    "href": "work/generalized-damage-diagnosis.html#learning-what-the-gates-have-in-common",
+    "title": "Generalized Damage Diagnosis Across Similar Structures",
+    "section": "Learning What the Gates Have in Common",
+    "text": "Learning What the Gates Have in Common\nA domain-adversarial neural network builds this in through a rivalry. A shared feature generator feeds two heads. One predicts the damage, using labels from the source gate only. The other tries to tell which gate the data came from. Training rewards features that help the first head and defeat the second, so the features keep what reveals damage and drop what reveals the structure.\n\n\n\nThe feature generator serves both a damage predictor, trained on source labels, and a domain classifier that it learns to defeat. Source: IWSHM 2025 presentation.\n\n\nAfter training, the learned features of the two gates line up: for the same amount of damage, both gates produce similar feature values.\n\n\n\nLearned feature values against damage level, with source and target responses following similar trends in several panels. Source: IWSHM 2025 domain-adaptation presentation, slide 10."
   },
   {
-    "objectID": "work/corrosion-simulation.html#keeping-the-surrogate-physical",
-    "href": "work/corrosion-simulation.html#keeping-the-surrogate-physical",
-    "title": "Multiphysics Corrosion Simulation and Surrogate Modeling",
-    "section": "Keeping the Surrogate Physical",
-    "text": "Keeping the Surrogate Physical\nTo keep long forecasts consistent with continuing material loss, I contributed my phase-field simulations and baseline surrogate to a physics-constrained version. Its loss function penalizes predictions in which corroded material reappears.\nThe extension reduced mean squared error from 0.0125 to 0.0066. In the published benchmark, forecasting 200 time steps took 1.3 seconds with the extension and 5.4 seconds with the original surrogate, after training.\n\n\n\n\nThe physics loss constrains material loss while the encoder and decoder compress and reconstruct pit shapes. Source: MSSP 2023, 110515."
+    "objectID": "work/generalized-damage-diagnosis.html#results-on-the-unlabeled-gate",
+    "href": "work/generalized-damage-diagnosis.html#results-on-the-unlabeled-gate",
+    "title": "Generalized Damage Diagnosis Across Similar Structures",
+    "section": "Results on the Unlabeled Gate",
+    "text": "Results on the Unlabeled Gate\nOn the simulated Bonneville test data, mean squared error for gap size fell from 0.069 to 0.015, a 78% reduction from the source-only baseline. Corrosion error fell from 0.221 to 0.114. Target damage labels were used to evaluate predictions after training.\nA statistical check helps explain the difference. Domain adaptation assumes that damage relates to learned features similarly on both gates. Squared conditional maximum mean discrepancy (CMMD²), a measure of that mismatch, was smaller for gaps than for corrosion: 1.37 versus 12.53. Corrosion produced more structure-specific strain responses.\n\n\n\nPredicted versus true normalized damage on Bonneville: gap length (left) and corrosion thickness loss (right). The dashed line marks exact agreement. Source: IWSHM 2025 domain-adaptation presentation, slide 9."
   },
   {
-    "objectID": "work/corrosion-simulation.html#what-it-means",
-    "href": "work/corrosion-simulation.html#what-it-means",
-    "title": "Multiphysics Corrosion Simulation and Surrogate Modeling",
+    "objectID": "work/generalized-damage-diagnosis.html#a-different-route-federated-learning",
+    "href": "work/generalized-damage-diagnosis.html#a-different-route-federated-learning",
+    "title": "Generalized Damage Diagnosis Across Similar Structures",
+    "section": "A Different Route: Federated Learning",
+    "text": "A Different Route: Federated Learning\nDomain adaptation moves knowledge from a labeled structure to an unlabeled one. Federated learning addresses a different situation: several structures each have data, but the data cannot be pooled because of ownership, privacy, or communication cost.\nIn a framework led by Yichao Yang, each gate trains a model locally and shares only model updates, never raw measurements. On three variants of the Greenup finite-element model, it estimated loss-of-contact damage about as accurately as centralized training. The paper received the Best Paper award at IWSHM 2025."
+  },
+  {
+    "objectID": "work/generalized-damage-diagnosis.html#related-work-with-the-team",
+    "href": "work/generalized-damage-diagnosis.html#related-work-with-the-team",
+    "title": "Generalized Damage Diagnosis Across Similar Structures",
+    "section": "Related Work with the Team",
+    "text": "Related Work with the Team\nAs a coauthor, I also contributed to work led by Yichao Zeng that translates measurements from similar gates into a common domain, then estimates damage with uncertainty through Bayesian inference and model averaging."
+  },
+  {
+    "objectID": "work/generalized-damage-diagnosis.html#what-it-means",
+    "href": "work/generalized-damage-diagnosis.html#what-it-means",
+    "title": "Generalized Damage Diagnosis Across Similar Structures",
     "section": "What It Means",
-    "text": "What It Means\nThe phase-field model explains how load shapes corrosion, and the surrogate makes that physics fast enough to run thousands of times. That speed is what made the next step possible: carrying uncertainty through the model to a risk map of an entire gate. Later, I mentored Haiwei Lin in extending the model from crack initiation to crack growth.\nPublications\nCorrosion Morphology Prediction of Civil Infrastructure Using a Physics-Constrained Machine Learning Method. Mechanical Systems and Signal Processing, 200, 110515, 2023. DOI ↗\nA Probabilistic Computational Framework for the Prediction of Corrosion-Induced Cracking in Large Structures. Scientific Reports, 12, 20898, 2022. DOI ↗\nMulti-Scale Multi-Mode Damage Simulation for Miter Gates. Model Validation and Uncertainty Quantification, SEM Conference Proceedings, Springer, 2025.\nA Hybrid Surrogate Modeling Method for Corrosion Morphology Prediction Under Non-Stationary Dynamic Loading. 14th International Workshop on Structural Health Monitoring (IWSHM), Stanford, California, pp. 643–650, 2023. DOI ↗\n\nPrevious Case Study← Bridge MonitoringNext Case StudyUncertainty and Reliability →"
+    "text": "What It Means\nTogether, these studies move damage diagnosis from a single, well-studied structure toward a population of similar ones, which is the situation most owners actually face. Transfer works best when damage affects both structures in a similar way, and a statistical check can show where it falls short.\nPublications\nEnhancing Bayesian Inference-Based Damage Diagnostics Through Domain Translation with Application to Miter Gates. Journal of Mechanical Design, 147(6), 061701, 2025. DOI ↗\nGeneralized Damage Diagnostics of Two Miter Gates Through Domain Adaptation. 15th International Workshop on Structural Health Monitoring (IWSHM), Stanford, California, 2025. DOI ↗\nA Privacy-Preserving Framework Using Federated Learning for Structural Health Monitoring with Miter Gates Application. IWSHM, Stanford, California, 2025 · Best Paper (coauthor). DOI ↗\nDamage Diagnostics of Miter Gates Using Domain Adaptation and Normalizing Flow-Based Likelihood-Free Inference. Annual Conference of the PHM Society, 16(1), 2024. DOI ↗\n\nPrevious Case Study← Bayesian Model UpdatingOverviewAll Case Studies →"
   }
 ]
