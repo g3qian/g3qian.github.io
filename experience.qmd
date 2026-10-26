@@ -117,6 +117,10 @@ Teaching assistant for SE 168/268, *Structural System Testing and Model Correlat
 
 I led lab instruction in instrumentation, hammer and shaker testing, data acquisition, and data quality, and guided students through modal identification and correlation. In the final project, students locate a hidden spring and estimate its stiffness from new measurements.
 
+::: {.case-links}
+[Structural Vibration Testing and Model Correlation →](work/vibration-testing-model-correlation.qmd)
+:::
+
 I also supported SE 130A/B, *Structural Analysis I and II* (Summer 2021).
 :::
 ::::

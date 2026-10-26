@@ -80,5 +80,5 @@ The phase-field model explains how load shapes corrosion, and the surrogate make
 {{< include ../includes/references-simulation.html >}}
 
 ```{=html}
-<nav class="case-nav" aria-label="Case studies"><a href="bridge-oma-temperature.html"><small>Previous Case Study</small>← Bridge Monitoring</a><a href="corrosion-reliability.html"><small>Next Case Study</small>Uncertainty and Reliability →</a></nav>
+<nav class="case-nav" aria-label="Case studies"><a href="vibration-testing-model-correlation.html"><small>Previous Case Study</small>← Vibration Testing</a><a href="corrosion-reliability.html"><small>Next Case Study</small>Uncertainty and Reliability →</a></nav>
 ```

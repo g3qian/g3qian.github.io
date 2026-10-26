@@ -37,7 +37,8 @@ class Document(HTMLParser):
 pages=sorted([*SITE.glob('*.html'),*(SITE/'work').glob('*.html')])
 docs={p:Document(p).root for p in pages}
 errors=[];links=0;counts={}
-if len(pages)!=10:print(f'Note: expected 10 pages; found {len(pages)}')
+expected_pages=len([*ROOT.glob('*.qmd'),*(ROOT/'work').glob('*.qmd')])
+if len(pages)!=expected_pages:errors.append(f'Expected {expected_pages} pages; found {len(pages)}')
 for path,doc in docs.items():
     rel=str(path.relative_to(SITE));mains=list(doc.all('main'))
     if len(mains)!=1:errors.append(f'{rel}: expected one main landmark');continue

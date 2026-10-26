@@ -82,5 +82,5 @@ Automated operational modal analysis with uncertainty bounds turns continuous vi
 :::
 
 ```{=html}
-<nav class="case-nav" aria-label="Case studies"><a href="../work.html"><small>Overview</small>← All Case Studies</a><a href="corrosion-simulation.html"><small>Next Case Study</small>Corrosion Simulation →</a></nav>
+<nav class="case-nav" aria-label="Case studies"><a href="../work.html"><small>Overview</small>← All Case Studies</a><a href="vibration-testing-model-correlation.html"><small>Next Case Study</small>Vibration Testing →</a></nav>
 ```

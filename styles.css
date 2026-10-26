@@ -256,3 +256,8 @@ a.pill:hover { border-color: var(--accent); background: var(--accent-soft); }
 
 /* Compact comparison figures keep the plot and caption together in the text column. */
 .case-page .figure-compact { max-width: 600px; margin-inline: auto; }
+
+/* Keep the teaching case's pre-test, test, and post-test sequence easy to scan. */
+.course-sequence { border-left: 3px solid var(--accent); padding: .25rem 0 .25rem 1.2rem; margin-block: 1.5rem 2rem; }
+.course-sequence ol { margin: 0; padding-left: 1.2rem; }
+.course-sequence li { padding-left: .3rem; margin-block: .55rem; }
